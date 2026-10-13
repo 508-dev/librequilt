@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "devkitVersion": "0.1.0",
+  "id": "librequilt",
+  "name": "librequilt",
+  "summary": "Research into quilt design software: block drawing, quilt layout, and yardage and cutting charts.",
+  "repository": "https://github.com/508-dev/librequilt",
+  "maintainer": "caleb@508.dev",
+  "license": "AGPL-3.0-or-later",
+  "licenseException": null,
+  "specificationApproval": null
+}
