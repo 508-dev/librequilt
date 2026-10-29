@@ -407,6 +407,7 @@ basis for the maths.
 
 1. Will the maintainer accept a browser-first (non-Linux-first) delivery, given DECISIONS #12? If not, this
    target should be declined — the audience is not on Linux or Android.
+   **Resolved 2026-10-28:** the maintainer chose browser first; see [decisions](decisions.md).
 2. Which block names / product terms are trademarked or risky (e.g. "Dear Jane"), and which are generic?
 3. Does independently enumerating traditional block geometry risk copying Brackman's "compilation"?
 4. Is `.pj8` import worth the clean-room effort at all, given Quarter Inch opens it free today?
@@ -425,3 +426,175 @@ the audience is Windows/macOS/iPad and a Linux- or Android-first build would ser
 **Confidence: medium.** The single finding that would change it: the presence of a maintained FOSS
 competitor (none found) — or a maintainer decision that Linux-first is non-negotiable (which would flip the
 recommendation to decline).
+
+---
+
+## Specification research (2026-10-28)
+
+Five research tracks gathered evidence for the functional specification. The reports, with their
+evidence registers (IDs A1 to A78, B1 to B19, C1 to C19, D1 to D21 and E1 to E52), the
+claims files and the method are in [spec-research](spec-research/README.md). Links in every report
+were probed, cited repositories looked up, and quoted claims matched against the cited pages.
+The orchestrator re-derived the formulas the proposals rest on. Nothing below is an approved
+requirement.
+
+**Decided since the nomination research:** browser first ([decisions](decisions.md)).
+
+### What the research establishes
+
+- **Arithmetic** (track A). A quarter-inch seam allowance (6 mm in metric). Squares, rectangles and
+  strips are cut at finished size plus 1/2 inch; half-square triangles made two at a time at plus
+  7/8; eight at a time from (finished + 7/8) x 2; quarter-square triangles at plus 1 1/4. Cut
+  sizes and yardage round up to the next 1/8 (inch or yard). Yardage is strips cut across a usable
+  width of 40 to 42 inches, then subcut; public calculators all do this greedily, and no maintained
+  FOSS calculator exists. Metric quilting still works mostly in inches; metric cotton is 110 to 112
+  cm wide and sold by the metre. "Standard" bed and quilt sizes disagree by up to 30 inches.
+- **Blocks and their sources** (track B). Squares, rectangles, half- and quarter-square triangles
+  and flying geese cover the traditional blocks that need only straight seams and no set-in seams.
+  Diamond stars, hexagons and curves each need a different kind of seam. Works published in 1930 or
+  earlier are in the US public domain as of 2026; that covers Marie Webster's 1915 book (on Project
+  Gutenberg) and the Ladies Art Company catalogues (about 1897 to 1928, reproduced by the Quilt
+  Index). The Copyright Office's Compendium excludes common geometric shapes and says a pattern
+  book's registration does not cover the individual pattern pieces. The live risk is names:
+  "Dear Jane" is a registered trademark. Track B lists 58 candidate blocks, 48 of them straight-seam.
+- **Layouts** (tracks D and A). Straight sets, sashing with or without cornerstones, alternate plain
+  blocks, rows, medallions and borders each reduce to a short rule. Only the on-point setting needs
+  non-obvious geometry: side triangles from squares of block x 1.414 + 1 1/4 cut twice diagonally,
+  corner triangles from squares of block / 1.414 + 7/8 cut once, both rounded up to 1/8.
+- **Foundation paper piecing** (track D). A 2021 SIGGRAPH paper (Leake, Bernstein, Davis and
+  Agrawala) gives an exact test for whether a design can be paper-pieced and a way to find the
+  order; a 2022 Bridges paper extends it. No released implementation was found; svg_quilter (MIT)
+  has been dormant since 2025-07. Printing a pattern whose sections and order the quilter marks is
+  far smaller than finding a sewable split automatically.
+- **Fabric photos** (tracks D and C). Tools set real-world scale from a ruler in the photo, from
+  cropping at the repeat, or from a typed size. Phone photos cannot give accurate colour.
+- **Printing** (tracks C and D). The most dangerous step for the quilter. Viewers and browsers often
+  default to fit-to-page, which shrinks templates by a few percent. The universal remedy is to print
+  at actual size and measure a printed test square. Large templates are tiled with overlap marks.
+- **Users** (track C). Quilters still design on graph paper because it needs no maths or computer
+  skills. The free browser tools (NiftyFifty, PreQuilt's free tier, Quiltler's free tier) cover the
+  core loop; none is open source, and NiftyFifty's pages say "All rights reserved". WCAG 2.2 gives
+  testable targets suited to older users. Five to eight participants are enough for each round of
+  usability testing.
+- **Platform and stack** (track E). A static site can be installed on an iPad and work offline, but
+  Safari may evict stored data, so an exported project file must be the durable copy. Safari and
+  Firefox lack the File System Access API, so opening and saving go through a file input,
+  downloads and the share sheet. Leptos, Dioxus and Yew render to the DOM, which suits accessible
+  controls and an SVG editing surface; egui draws to a canvas, and Slint's browser build has no
+  screen-reader support. Permissively licensed crates cover geometry, PDF, SVG, images and colour.
+  Whether they all build for WebAssembly, and how large and fast the result is, were not measured.
+
+### Corrections made in review
+
+1. **Half-square triangles four at a time.** Track A's "exact" formula, and the published charts it
+   cites, cut too small. Sewing a quarter inch inside the edge of two squares and cutting both
+   diagonals makes the seam segment (side - 1/2) the unit's diagonal, so the cut square is
+   (finished + 1/2) x 1.414 + 1/2, about finished x 1.414 + 1 1/4. For 3-inch finished units that
+   is 5 1/2 inches, not 5 (track A) or 4 1/4 (the chart). The same reasoning reproduces the
+   familiar 7/8-inch rule for two at a time. The examples script now carries the corrected formula.
+   Lesson for the specification: derive each formula from the geometry and test it, rather than
+   copying a web chart; fabricmathtools.com (A11) disagrees with several independent sources.
+2. **Wide backing.** Track A's 108-inch example lays the backing lengthwise (2 1/2 yards); turning
+   it needs 2. The specification must say whether the tool turns pieces to save fabric.
+3. **Block names are not block geometry.** Webster's name list shows that a name existed, not which
+   block it named, and names varied by region. Each block's geometry needs a public-domain
+   illustration before it ships.
+4. **1931 to 1963 sources** (McKim, Hall and Kretsinger, Nancy Cabot) are in the public domain only
+   if their copyright was not renewed. That check is still open.
+5. **Device evidence** for quilters rests on vendors' marketing pages; no neutral survey was found.
+
+### Candidate requirements
+
+Consolidated from the tracks' proposals. Each is a proposal for the specification.
+
+*Measurement and arithmetic*
+
+1. Lengths are stored exactly, as whole sixteenths of an inch; values are rounded only when shown as
+   a cut size, up to the next 1/8 inch (D, A).
+2. Cut sizes follow the geometry: finished + 1/2 for squares, rectangles and strips; + 7/8 for
+   two-at-a-time half-square triangles; (finished + 7/8) x 2 for eight at a time;
+   (finished + 1/2) x 1.414 + 1/2 for four at a time; + 1 1/4 for quarter-square triangles; and the
+   flying-geese and stitch-and-flip rules in track A. Each has an acceptance test from a worked example.
+3. Yardage: pieces per strip = whole pieces across the usable width; strips = pieces needed / pieces
+   per strip, rounded up; length = strips x strip width; total rounded up to the next 1/8 yard.
+   Usable width, waste allowance and shrinkage allowance are settings.
+4. Binding, backing and batting are calculated, with strip width, joining allowance and backing
+   overhang as settings.
+
+*Layout*
+
+5. A quilt is a grid of block slots with rotation, optional sashing with or without cornerstones,
+   and one or more borders with butted corners (D).
+6. An on-point setting computes side and corner setting triangles by the formulas above, adding the
+   sashing width to the block size when there is sashing (D, A).
+
+*Blocks*
+
+7. Blocks are defined as geometry on a grid in the project's own words, never copied from a modern
+   compilation; each block records the public-domain source for its name and its geometry (B).
+8. The first library contains only straight-seam blocks without set-in seams (B).
+9. Trademarked or designer-tied names are screened and excluded by default (B).
+
+*Fabrics*
+
+10. A fabric is a solid colour or a photo with a stored scale, set by marking two points a known
+    distance apart or by typing the repeat size; colour is treated as approximate (D, C).
+
+*Printing*
+
+11. Cutting charts and templates print at exact size on Letter or A4 and every page carries a 1-inch
+    and a 1-cm test square; templates larger than a page are tiled with overlap and alignment marks;
+    output is PDF and SVG (C, D, E).
+12. Cutting charts list totals in yards and metres (C).
+
+*Files, storage and privacy*
+
+13. Designs save to a documented, versioned open format; older versions are upgraded into a new copy;
+    unknown newer versions are refused without changing the file (E, C).
+14. The user can always download or share the complete project file; anything kept only in the
+    browser is labelled as recoverable but not guaranteed (E).
+15. Files open and save on iPad Safari without the File System Access API (E).
+16. After one online visit the app works offline, and no design, photo or usage data leaves the
+    device; there is no telemetry (E, charter).
+
+*Usability and accessibility*
+
+17. Every action done by dragging can also be done by tapping or clicking; touch targets are at least
+    24 by 24 CSS pixels; text resizes to 200 percent; text contrast is at least 4.5 to 1; colour is
+    never the only signal; a greyscale preview shows fabric value (C).
+18. A first-time quilter can lay out a quilt and print its cutting chart without a manual, shown by a
+    five-to-eight-person usability test before the bar is declared met (C).
+
+### Open decisions for the maintainer
+
+The orchestrator's recommendation is given for each; the decision is the maintainer's.
+
+| Decision | Options | Recommendation | Evidence |
+| --- | --- | --- | --- |
+| Foundation paper piecing | Exclude from v1; quilter marks sections and order, tool prints; tool finds the split | Exclude from v1; make "quilter marks, tool prints" the first addition | D section 2 |
+| On-point setting | In v1 or later | In v1: two formulas, and the charter's sampler needs it | D, A |
+| Other layouts | Medallion, rows, mitered corners, pieced borders | Defer all | D section 1 |
+| Block library | About 40 straight-seam blocks; also stars, hexagons, curves | About 40 straight-seam blocks | B sections 1 and 5 |
+| 1931 to 1963 sources | Pre-1931 only; commission a renewal search | Pre-1931 only for now | B section 2 |
+| Units | Inches only; inches with metric totals and A4; full metric editing | Inches, with metric totals and A4 printing; full metric later | A section 1, C section 6 |
+| Fabric photo scale | Ruler in photo; typed repeat; both | Both: they set the same scale factor | D section 3 |
+| Accessibility level | WCAG 2.2 AA; AAA | AA, with 44-pixel touch targets as the design goal | C section 5 |
+| Usable fabric width | 40 or 42 inches, as default | 40, changeable: buying short is worse than buying extra | A section 4 |
+| Yardage rounding | 1/8 or 1/4 yard | 1/8 yard | A section 4 |
+| Bed-size presets | Ship a table; leave them out | Leave out of v1; sources disagree too much | A section 3 |
+| Cutting plan | Greedy strips per size; mixed-size optimisation | Greedy, as every public calculator does | A section 6 |
+| Stack | A Rust DOM framework (Leptos, Dioxus, Yew); TypeScript | Build the same small prototype in the leading options and measure it on an iPad before choosing | E sections 2 and 5 |
+| Editing surface | SVG with HTML controls; canvas | SVG with HTML controls, for accessibility | E section 2 |
+| Project file | JSON; ZIP of JSON and images; SVG with embedded data | A single ZIP with versioned JSON and embedded fabric photos | E section 6 |
+
+### Still unknown, and next steps
+
+- **Lawful observation of the free tool**: the protocol in
+  [observations](observations/niftyfifty-sampler-protocol.md), carried out by a person.
+- **Quilters' own view**: no quilter has been interviewed; the usability protocol in track C,
+  section 7, could double as a first round.
+- **Renewal search** for McKim (1931), Hall and Kretsinger (1935) and Nancy Cabot (from 1933), and a
+  USPTO screen of the candidate block names.
+- **Prototype measurements** on iPad Safari: download size, start-up time, memory with a large fabric
+  photo, printing a generated PDF, and screen-reader behaviour.
+- **Block geometry**: match each candidate block to a public-domain illustration.
