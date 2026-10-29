@@ -83,11 +83,9 @@ provisional.
 
 ## Platforms, usability, and performance
 
-- **Platform: an open decision, and the largest one.** The surveyed audience uses
-  Windows, macOS and, increasingly, iPads. The research recommends a browser-first tool
-  and says a Linux-first desktop or Android-first build would reach few of these users.
-  That runs against the hub's stated preference. The maintainer settles this before a
-  specification is written.
+- **Platform: browser first** (maintainer decision, 2026-10-28; see
+  [decisions](decisions.md)). The surveyed audience uses Windows, macOS and, increasingly,
+  iPads; a browser reaches all of them and Linux too. A desktop wrapper may come later.
 - **Usability.** The incumbent's most repeated complaint is its learning curve. The bar
   is that a quilter can lay out a first quilt and print its cutting chart without a manual.
 - **Performance.** No targets yet.
