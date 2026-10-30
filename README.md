@@ -8,6 +8,10 @@ Maintainer: caleb@508.dev
 
 Research-stage project. Registration in the Genairosity hub requires maintainer approval. No implementation or release is promised.
 
+Platform and stack: a web-only application in TypeScript that runs in current browsers on
+Windows, macOS, iPadOS, ChromeOS and Linux ([decisions](docs/decisions.md)). There is no code
+yet; build and test commands will be added to [verification](docs/verification.md) with it.
+
 ## Start here
 
 1. Read [the charter](docs/charter.md) and [contribution process](CONTRIBUTING.md).

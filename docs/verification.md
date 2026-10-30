@@ -17,9 +17,11 @@ unknowns, and acceptance evidence. A reviewer should be able to follow the evide
 
 ## Implementation checks
 
-No application stack has been selected. Before implementation, document executable
-build, lint/typecheck, test, and acceptance commands appropriate to the approved scope.
-Commit dependency locks and use frozen/locked installs in CI. Never add model runners.
+The stack is a web-only TypeScript application ([decisions](decisions.md)). No code exists
+yet. With the project skeleton, document executable build, lint/typecheck, test, and
+acceptance commands appropriate to the approved scope. Commit the dependency lock, use
+frozen installs in CI, and set the package manager's seven-day minimum release age (Bun:
+`minimumReleaseAge = 604800`; pnpm: `minimumReleaseAge: 10080`). Never add model runners.
 
 ## Release evidence
 

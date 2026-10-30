@@ -567,7 +567,9 @@ _Usability and accessibility_
 
 ### Open decisions for the maintainer
 
-The orchestrator's recommendation is given for each; the decision is the maintainer's.
+Decided by the maintainer on 2026-10-30; see [decisions](decisions.md). The chosen option matches
+the orchestrator's recommendation in every row except the stack, where it had recommended
+measuring prototypes before choosing.
 
 | Decision                 | Options                                                                              | Chosen Option                                                         | Evidence                 |
 | ------------------------ | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------- | ------------------------ |
@@ -583,7 +585,7 @@ The orchestrator's recommendation is given for each; the decision is the maintai
 | Yardage rounding         | 1/8 or 1/4 yard                                                                      | 1/8 yard                                                              | A section 4              |
 | Bed-size presets         | Ship a table; leave them out                                                         | Leave out of v1; sources disagree too much                            | A section 3              |
 | Cutting plan             | Greedy strips per size; mixed-size optimisation                                      | Greedy, as every public calculator does                               | A section 6              |
-| Stack                    | A Rust DOM framework (Leptos, Dioxus, Yew); TypeScript                               | Typescript                                                            | E sections 2 and 5       |
+| Stack                    | A Rust DOM framework (Leptos, Dioxus, Yew); TypeScript                               | TypeScript                                                            | E sections 2 and 5       |
 | Editing surface          | SVG with HTML controls; canvas                                                       | SVG with HTML controls, for accessibility                             | E section 2              |
 | Project file             | JSON; ZIP of JSON and images; SVG with embedded data                                 | A single ZIP with versioned JSON and embedded fabric photos           | E section 6              |
 
