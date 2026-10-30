@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "devkitVersion": "0.1.0",
+  "devkitVersion": "0.1.1",
   "id": "librequilt",
   "name": "librequilt",
   "summary": "Research into quilt design software: block drawing, quilt layout, and yardage and cutting charts.",

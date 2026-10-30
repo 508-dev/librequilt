@@ -52,11 +52,12 @@ repository is not yet registered in the hub's `projects.json`.
 5. Print a yardage estimate and a rotary-cutting chart with seam allowances, as PDF or SVG.
 6. Save the design in an open, documented file format.
 
-**Open scope decisions for the maintainer:**
+**Scope decisions** (maintainer, 2026-10-30; see [decisions](decisions.md)):
 
-- How many traditional blocks a first version needs, and from which public-domain sources
-  they are drawn.
-- Whether foundation paper piecing belongs in the first version.
+- About 40 traditional blocks that need only straight seams and no set-in seams, drawn
+  from sources published before 1931.
+- Foundation paper piecing is not in the first version. The first addition after it is
+  printing patterns whose sections and sewing order the quilter marks.
 
 **Exclusions:**
 
@@ -89,8 +90,8 @@ provisional.
 - **Usability.** The incumbent's most repeated complaint is its learning curve. The bar
   is that a quilter can lay out a first quilt and print its cutting chart without a manual.
 - **Performance.** No targets yet.
-- **Stack.** Not chosen. Rust is preferred where it fits, including compiled for the
-  browser. No server is needed to design a quilt. No AI feature is planned.
+- **Stack.** A web-only application in TypeScript (maintainer decision, 2026-10-30; see
+  [decisions](decisions.md)). No server is needed to design a quilt. No AI feature is planned.
 - **Data handling.** Designs and fabric photographs stay on the quilter's device.
 
 ## Ownership and mission
