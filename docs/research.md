@@ -36,7 +36,7 @@ orchestrator then re-opened these sources directly:
 
 **Pursue, but narrowed — and contingent on platform. Confidence: medium.** The single finding that would
 change it: a maintained FOSS competitor (none found) — or a maintainer decision that Linux-first is
-non-negotiable, which would flip this to *decline*, because the audience is Windows/macOS/iPad. Full
+non-negotiable, which would flip this to _decline_, because the audience is Windows/macOS/iPad. Full
 reasoning in the final section.
 
 ## 1. Users and workflows
@@ -99,7 +99,7 @@ Verified from the vendor's own shop and support pages:
   Windows-on-ARM, no Windows S mode, no Linux [S3].
 - **Mac architecture status**: the Mac build is not Apple-Silicon-native — the vendor states that on an
   M-series Mac "you will need Rosetta installed in order to run EQ8" [S5a], and its own release notes say
-  the M1 update 3.2.0.4 fixed *lag* but "does not add compatibility for the new Apple Silicon M1 chip"
+  the M1 update 3.2.0.4 fixed _lag_ but "does not add compatibility for the new Apple Silicon M1 chip"
   [S8]. A separate "Wine Error" support article (printing/saving/importing failures) is consistent with a
   Wine-based Mac build, though the vendor does not say so outright on that page — treat "runs under Wine"
   as an inference from these three facts, not a direct statement [S5]. The vendor said in 2021 that EQ8
@@ -117,7 +117,7 @@ Verified from the vendor's own shop and support pages:
   releases (e.g., a crash fix when switching worktables on the Print & Export tab) [S27].
 - **Content ecosystem (add-ons)**: EQ8 ships 6,200 manufacturer fabrics and "6,000+ copyright-free blocks";
   paid add-ons: EQ Stash fabric downloads (1,000+ fabrics each, manufacturer collections), BlockBase+
-  (4,264 blocks from Barbara Brackman's *Encyclopedia of Pieced Quilt Patterns*, standalone or linked to
+  (4,264 blocks from Barbara Brackman's _Encyclopedia of Pieced Quilt Patterns_, standalone or linked to
   EQ8), designer quilt/block libraries, AccuQuilt GO! die-matched blocks, Kaleidoscope paper-piecing packs,
   Dear Jane, plus an annual "EQ Membership" with free Stash downloads and discounts [S2].
 
@@ -127,21 +127,21 @@ From NiftyFifty's comparison page (a competitor, "Updated August 2026 · prices 
 vendor's site") plus each vendor's own pages opened this session. Treat positioning language skeptically;
 prices not confirmed this session are marked inline [S9]:
 
-| Tool | Platform | Price | Notes |
-|---|---|---|---|
-| Electric Quilt 8 | Win/Mac | $239.95 once (+$24.95 2nd platform) | deepest feature set; no iPad/Chromebook [S2][S9] |
-| QuiltLab (unverified) | web | free plan; paid Maker plan (price not captured) | "modern alternative to EQ8"; EQ8 .pj8 import on the paid plan [S9] |
-| NiftyFifty | web (any device) | free | full Quilt Designer + Pattern Designer + FPP maker; covers EQ8's core block→layout→yardage→print loop [S9] |
-| PreQuilt | web | subscription; Market plan $100/yr | solid-color cards, fabric calculator, designer coloring-page market [S9] |
-| TideStitch (unverified) | iPad/Mac/iPhone | free (4 designs); one-time purchase, no subscription (exact price not captured) | true-scale fabric tiling, eighths measurements, FPP add-on [S9] |
-| Quiltler 3 | iPhone/iPad/web | free first quilt; $7.99/mo or $49.99/yr | explicitly does NOT import EQ8 projects [S9][S10] |
-| Fern Mountain Quilt Architect (unverified) | Mac/Win | one-time purchase (price not captured) | photo/sketch → FPP patterns, no Y-seams [S9] |
-| QuiltPop (unverified) | iPhone/iPad | free | layouts + printable FPP blocks [S9] |
-| Quiltography (unverified) | iPad | $14.99 once | yardage/stash; aging, iPad-only [S9] |
-| Quarter Inch | iPad/Mac/web | Free plan (3 quilts); Quilter $9/mo or $89/yr | imports .pj8 (free to open/view, with an import report) [S34] |
-| Design N Quilt | Win | $799.99 SRP | fabric-realistic design + "cut as you go"; priced well above EQ8 [S28] |
-| BlockBase+ | Win/Mac | EQ add-on/standalone (price not captured this session) | block encyclopedia database, prints charts/templates/foundations [S2] |
-| Pro-Stitcher Designer | Win | paid (longarm ecosystem) | machine-quilting motif design, multi-format longarm export [S17] |
+| Tool                                       | Platform         | Price                                                                           | Notes                                                                                                      |
+| ------------------------------------------ | ---------------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Electric Quilt 8                           | Win/Mac          | $239.95 once (+$24.95 2nd platform)                                             | deepest feature set; no iPad/Chromebook [S2][S9]                                                           |
+| QuiltLab (unverified)                      | web              | free plan; paid Maker plan (price not captured)                                 | "modern alternative to EQ8"; EQ8 .pj8 import on the paid plan [S9]                                         |
+| NiftyFifty                                 | web (any device) | free                                                                            | full Quilt Designer + Pattern Designer + FPP maker; covers EQ8's core block→layout→yardage→print loop [S9] |
+| PreQuilt                                   | web              | subscription; Market plan $100/yr                                               | solid-color cards, fabric calculator, designer coloring-page market [S9]                                   |
+| TideStitch (unverified)                    | iPad/Mac/iPhone  | free (4 designs); one-time purchase, no subscription (exact price not captured) | true-scale fabric tiling, eighths measurements, FPP add-on [S9]                                            |
+| Quiltler 3                                 | iPhone/iPad/web  | free first quilt; $7.99/mo or $49.99/yr                                         | explicitly does NOT import EQ8 projects [S9][S10]                                                          |
+| Fern Mountain Quilt Architect (unverified) | Mac/Win          | one-time purchase (price not captured)                                          | photo/sketch → FPP patterns, no Y-seams [S9]                                                               |
+| QuiltPop (unverified)                      | iPhone/iPad      | free                                                                            | layouts + printable FPP blocks [S9]                                                                        |
+| Quiltography (unverified)                  | iPad             | $14.99 once                                                                     | yardage/stash; aging, iPad-only [S9]                                                                       |
+| Quarter Inch                               | iPad/Mac/web     | Free plan (3 quilts); Quilter $9/mo or $89/yr                                   | imports .pj8 (free to open/view, with an import report) [S34]                                              |
+| Design N Quilt                             | Win              | $799.99 SRP                                                                     | fabric-realistic design + "cut as you go"; priced well above EQ8 [S28]                                     |
+| BlockBase+                                 | Win/Mac          | EQ add-on/standalone (price not captured this session)                          | block encyclopedia database, prints charts/templates/foundations [S2]                                      |
+| Pro-Stitcher Designer                      | Win              | paid (longarm ecosystem)                                                        | machine-quilting motif design, multi-format longarm export [S17]                                           |
 
 **Verdict on issue claims**: Quiltler "$49–99/yr" — the supportable figure is $7.99/mo or $49.99/yr [S10].
 The issue's "Quarter Inch $89/yr" figure is **confirmed** (its annual price); the earlier draft's claim that
@@ -174,21 +174,21 @@ Searches run (all 2026-10-11):
 
 Projects that are more than toys, and what they lack:
 
-| Project | URL | License | Stars | Last push | What it is / lacks |
-|---|---|---|---|---|---|
-| Seamly2D | github.com/FashionFreedom/Seamly2D | GPL-3.0 | 988 | 2026-10-10 (active) | **Garment** pattern-drafting CAD (measurements, multi-size). Not quilt-block/yardage/fabric-audition oriented; wrong domain model for quilts [S20][S19] |
-| Ink/Stitch | github.com/inkstitch/inkstitch | GPL-3.0 | 1,364 | 2026-10-11 (active) | Machine-**embroidery** digitizing Inkscape extension. Adjacent craft, not pieced-quilt design [S21] |
-| neonfuzz/svg_quilter | github.com/neonfuzz/svg_quilter | MIT | 8 | 2025-07-29 (dormant) | Python: SVG line art → foundation-paper-piecing pattern sheets (grouping, labeling, nesting). Single-function CLI, no block library, no fabric/yardage, no UI [S16a] |
-| TetonTopo/quiltblock | github.com/TetonTopo/quiltblock | MIT | 0 | 2026-09-23 (one-day project) | Geometry → seam-allowance math, cutting lists, pressing plans. Early-stage, no library/UI [S16b] |
-| william-pyle/QuiltDesigner | github.com/william-pyle/QuiltDesigner | GPL-3.0 | 0 | 2026-05-22 (single day) | "Design Quilts, generate fabric requirements, print instructions" — stub [S16c] |
-| JesseRWeigel/quiltsmith | github.com/JesseRWeigel/quiltsmith | MIT | 0 | 2026-08-13 (single day) | Generative block engine w/ yardage + embroidery export — stub [S16d] |
-| rhjones/quiltr | github.com/rhjones/quiltr | none (NOASSERTION) | 11 | 2016 (abandoned) | Web block-layout toy; confirms issue's "11 stars" claim [S12] |
-| awalsh17/quiltR | github.com/awalsh17/quiltR | MIT | 3 | 2022 | R plotting of quilt layouts; confirms issue's claim [S12] |
-| RFQuiltLayout | github.com/bryceredd/RFQuiltLayout | MIT | 866 | 2020 | iOS UICollectionView layout named "quilt" — unrelated to quilting [S12] |
+| Project                    | URL                                   | License            | Stars | Last push                    | What it is / lacks                                                                                                                                                   |
+| -------------------------- | ------------------------------------- | ------------------ | ----- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Seamly2D                   | github.com/FashionFreedom/Seamly2D    | GPL-3.0            | 988   | 2026-10-10 (active)          | **Garment** pattern-drafting CAD (measurements, multi-size). Not quilt-block/yardage/fabric-audition oriented; wrong domain model for quilts [S20][S19]              |
+| Ink/Stitch                 | github.com/inkstitch/inkstitch        | GPL-3.0            | 1,364 | 2026-10-11 (active)          | Machine-**embroidery** digitizing Inkscape extension. Adjacent craft, not pieced-quilt design [S21]                                                                  |
+| neonfuzz/svg_quilter       | github.com/neonfuzz/svg_quilter       | MIT                | 8     | 2025-07-29 (dormant)         | Python: SVG line art → foundation-paper-piecing pattern sheets (grouping, labeling, nesting). Single-function CLI, no block library, no fabric/yardage, no UI [S16a] |
+| TetonTopo/quiltblock       | github.com/TetonTopo/quiltblock       | MIT                | 0     | 2026-09-23 (one-day project) | Geometry → seam-allowance math, cutting lists, pressing plans. Early-stage, no library/UI [S16b]                                                                     |
+| william-pyle/QuiltDesigner | github.com/william-pyle/QuiltDesigner | GPL-3.0            | 0     | 2026-05-22 (single day)      | "Design Quilts, generate fabric requirements, print instructions" — stub [S16c]                                                                                      |
+| JesseRWeigel/quiltsmith    | github.com/JesseRWeigel/quiltsmith    | MIT                | 0     | 2026-08-13 (single day)      | Generative block engine w/ yardage + embroidery export — stub [S16d]                                                                                                 |
+| rhjones/quiltr             | github.com/rhjones/quiltr             | none (NOASSERTION) | 11    | 2016 (abandoned)             | Web block-layout toy; confirms issue's "11 stars" claim [S12]                                                                                                        |
+| awalsh17/quiltR            | github.com/awalsh17/quiltR            | MIT                | 3     | 2022                         | R plotting of quilt layouts; confirms issue's claim [S12]                                                                                                            |
+| RFQuiltLayout              | github.com/bryceredd/RFQuiltLayout    | MIT                | 866   | 2020                         | iOS UICollectionView layout named "quilt" — unrelated to quilting [S12]                                                                                              |
 
 Free-but-not-FOSS (relevant context, verified partially this session): QuiltAssistant (vendor states it
 "is not designed to be a cheap alternative to commercial software like Electric Quilt"; photo-to-pattern
-niche; last release v2.25, April 2013; can export designs *to* EQ formats) [S22]; PatternJam (free web,
+niche; last release v2.25, April 2013; can export designs _to_ EQ formats) [S22]; PatternJam (free web,
 preset patterns; not opened this session — from the issue, unverified); **NiftyFifty** — the significant
 one: a free, proprietary browser suite (Quilt Designer + Pattern Designer + FPP maker) that the vendor and
 its own comparison page describe as covering EQ8's core "draw a block → lay out the quilt → print yardage
@@ -197,7 +197,7 @@ quilting app at all [S18].
 
 **Conclusion for criterion (b): nothing maintained and FOSS covers block authoring + block library +
 fabric audition + yardage/cutting math + printable patterns. The closest active FOSS neighbors
-(Seamly2D, Ink/Stitch) serve different crafts. The FOSS niche is genuinely empty — but the *free-proprietary*
+(Seamly2D, Ink/Stitch) serve different crafts. The FOSS niche is genuinely empty — but the _free-proprietary_
 niche is not: NiftyFifty (and to a lesser degree PreQuilt) already cover much of the core loop for $0. That
 does not disqualify under criterion (b), which is about maintained FOSS, but it raises the bar for what a
 useful first version must do (see §9–10).**
@@ -229,20 +229,20 @@ difficulty and platform.
 
 ## 6. Content the software depends on
 
-- **Block libraries.** The classic block *designs* (Nine Patch, Log Cabin, Ohio Star, …) are traditional and
-  long public domain as ideas; what can be protected is a particular *drawing* or *compilation*. EQ8
+- **Block libraries.** The classic block _designs_ (Nine Patch, Log Cabin, Ohio Star, …) are traditional and
+  long public domain as ideas; what can be protected is a particular _drawing_ or _compilation_. EQ8
   advertises its blocks as "6,000+ copyright-free" and its Kaleidoscope add-ons as "1,000+ copyright-free"
-  [S2]. BlockBase+ (4,264 blocks) is built on Barbara Brackman's *Encyclopedia of Pieced Quilt Patterns* — a
+  [S2]. BlockBase+ (4,264 blocks) is built on Barbara Brackman's _Encyclopedia of Pieced Quilt Patterns_ — a
   copyrighted book whose illustrations and lookup system are not free to copy even though the underlying
   blocks are [S2].
 - **Fabric libraries.** EQ8 ships "6,200 fabrics from top manufacturers" [S2]; these are manufacturers'
   copyrighted swatch images, and EQ Stash downloads are licensed for EQ use. A FOSS tool cannot ship
   manufacturer fabric images.
-- **What a FOSS tool can ship day one:** (1) a *parametric* block library — block definitions as geometry
+- **What a FOSS tool can ship day one:** (1) a _parametric_ block library — block definitions as geometry
   plus traditional names (facts/ideas, not copied artwork); (2) solid colours and a few procedurally
   generated textures; (3) user-imported fabric photos (photograph/scan your own stash). This is how the web
   competitors already do it: PreQuilt ships "real solid-fabric libraries (Kona, AGF, Moda)" under licence,
-  and users import their own prints [S9]. Block *names* are the one thing to check case-by-case (a few may
+  and users import their own prints [S9]. Block _names_ are the one thing to check case-by-case (a few may
   be trademarked — see §10).
 
 ## 7. File formats and interchange
@@ -286,11 +286,11 @@ The smallest tool a quilter would switch to is the EQ8 core loop minus the catal
 (shape-based, with symmetry mirroring), place blocks in a grid/sashing/border layout, colour them with your
 own fabric photos or solid colours, and get a correct yardage + rotary-cutting chart as a printable
 PDF/SVG.** That is precisely what NiftyFifty already gives away free in the browser [S9], so a FOSS version
-must match that *and* add a reason to exist (freedom, self-hosting, no account, open file format).
+must match that _and_ add a reason to exist (freedom, self-hosting, no account, open file format).
 
 **Platform honesty:** the project's preferences (Linux-first desktop, Android-first mobile) do not fit this
 audience. The users are retired women in their 60s on Windows and Mac desktops, increasingly with iPads
-[S1]; EQ8's weakness is being *desktop-only*, and the winning web competitors are browser/iPad, not Linux or
+[S1]; EQ8's weakness is being _desktop-only_, and the winning web competitors are browser/iPad, not Linux or
 Android. A Linux-first desktop build would reach essentially none of the actual quilters, and Android-first
 mobile almost none (the mobile-quilting audience is iOS). **The pragmatic fit is a browser app (PWA) that
 runs on Windows, macOS, iPad and Chromebook with zero install**, optionally wrapped as a desktop binary that
@@ -306,14 +306,14 @@ auto-generation, and pattern-marketplace features.
 
 - **Trademark / branding.** "Electric Quilt", "EQ", "BlockBase", "EQ Stash" and product names are
   trademarks; do not reuse them. Most classic block names are generic, but a minority may be trademarked or
-  strongly tied to a designer's book (e.g. "Dear Jane"). *Open question, not a conclusion:* which block
+  strongly tied to a designer's book (e.g. "Dear Jane"). _Open question, not a conclusion:_ which block
   names and product terms are safe to use.
-- **Copyright / compilation.** Brackman's *Encyclopedia of Pieced Quilt Patterns* (the BlockBase+ source)
+- **Copyright / compilation.** Brackman's _Encyclopedia of Pieced Quilt Patterns_ (the BlockBase+ source)
   is copyrighted; its illustrations and lookup system must not be copied. Fabric swatch images are
-  manufacturer-copyrighted and cannot be redistributed. *Open question:* what counts as copying a
+  manufacturer-copyrighted and cannot be redistributed. _Open question:_ what counts as copying a
   "compilation" of block geometry vs. independently enumerating the same traditional blocks.
 - **`.pj8` import and clean-room.** No public spec exists; any import would rest on lawful observation only.
-  *Open question:* whether `.pj8` import is worth the clean-room risk in a v1, given Quarter Inch already
+  _Open question:_ whether `.pj8` import is worth the clean-room risk in a v1, given Quarter Inch already
   opens `.pj8` for free.
 - **Data / lock-in.** Users' value is trapped in `.pj8` and in EQ's add-on libraries; a switcher must
   re-enter blocks and fabrics. Mitigations: open format, import from PDF/SVG, and (later) `.pj8`.
@@ -329,56 +329,56 @@ auto-generation, and pattern-marketplace features.
 
 Access date for every row: 2026-10-11. "Not checked" means licence/terms were not assessed.
 
-| ID | URL | Terms / license | Establishes | Supports § |
-|---|---|---|---|---|
-| S1 | craftindustryalliance.org/quilting-trends-survey-results-2020/ | not checked | 2020 Premier Needle Arts survey: $4.2B market; 9–11M NA quilters; 98% female / 65% retired; "retired woman in her 60s… $74,000… 8–10 quilts/yr… 6–10 hrs/wk"; 46% search online daily; survey funded by PNA (owns Quilt Pro Systems) | 1, 5, 9 |
-| S1b | craftindustryalliance.org/the-size-of-the-quilting-market-quilting-trends-survey-results-2021/ | not checked | 2021 iteration: 10–12M quilters; 2022 PDF (fabshopnet) repeats 9–11M | 1 |
-| S2 | electricquilt.com/online-shop/electric-quilt-8/ (+ /category/electric-quilt-8-eq8/, /online-shop/blockbase/) | not checked | $239.95; single-user, 2 activations, non-transferable; $24.95 Migration Kit; "6,200 fabrics"; "6,000+ copyright-free blocks"; BlockBase+ 4,264 blocks from Brackman's *Encyclopedia*; add-ons (AccuQuilt, EQ Artists, Stash, Kaleidoscope, Dear Jane) | 2, 6 |
-| S3 | support.electricquilt.com/articles/eq8-system-requirements/ | not checked | Win 7 SP1–Win 11; macOS 10.13–Tahoe 26/Sequoia 15; M-series; no Chromebook/iPad/Android/iOS/ARM/S-mode/Linux; "internet required for activating, periodic validation; offline use OK" | 2, 5 |
-| S4 | support.electricquilt.com/articles/support-for-macos-big-sur/ | not checked | "EQ8 now fully supports… M1 chip"; 3.2.0.4 (2021-05-19) fixed lag | 2 |
-| S5 | support.electricquilt.com/articles/wine-error/ | not checked | "Wine error" support article (image import/printing/install) — consistent with a Wine-based Mac build | 2 |
-| S5a | support.electricquilt.com/articles/what-is-rosetta/ | not checked | M-series Macs "will need Rosetta installed in order to run EQ8" | 2 |
-| S6 | support.electricquilt.com/articles/macos-28-compatibility-with-eq/ | not checked | Vendor: "will have a solution in place before the release of macOS 28" (updated 2026-05-22) | 2 |
-| S7 | support.apple.com/en-us/102527 | not checked | Rosetta available through macOS 27; from macOS 28 "only for certain older, unmaintained games" | 2 |
-| S8 | electricquilt.com/product-updates/eq8-updates/eq8-update-release-notes/ | not checked | Windows 1.1.0.6 (2025-02-28); Mac 3.2.0.7 (2023-11-10); 3.2.0.4 "does not add… Apple Silicon M1" | 2, 4 |
-| S9 | niftyfiftyquilting.com/quilt-design-software/eq8-alternatives | not checked | Competitor comparison ("Updated August 2026"); free NiftyFifty covers core loop; "three complaints" = price / learning curve / desktop lock-in; PreQuilt/Quiltler/TideStitch/Quiltography/StitchLogic/CinchQuilt pricing | 3, 4, 5, 6, 9 |
-| S10 | quiltler.com/eq8-alternative + quiltler.com/terms | not checked | Quiltler does not import EQ8 .pj8; $7.99/mo or $49.99/yr | 3, 5 |
-| S11 | support.electricquilt.com/articles/exporting-for-longarm-quilting-machines/ | not checked | EQ8 has no longarm export | 2, 7 |
-| S12 | GitHub search (`gh search repos`, ≥14 queries incl. DE/FR/ES/JA) | n/a | No maintained quilt-design repo; "quilt" dominated by Minecraft Quilt loader | 4 |
-| S13 | GitLab API projects?search=quilt | n/a | Zero quilt-design results (equilibrator, Minecraft-adjacent) | 4 |
-| S14 | Codeberg API repos/search?q=quilt | n/a | Only bmad4ever/bmquilting (0★) quilt-adjacent; rest Minecraft | 4 |
-| S15 | SourceForge directory ?q=quilt | n/a | No quilt-design software surfaced | 4 |
-| S16 | support.oesd.com/article/152-formats-supported | not checked | Longarm/quilting formats QLI, HQF, IQP, BQM, CQP, HQA, HQV, HQW, PAT, QCC, SSD; DXF/SVG under vector | 2, 7 |
-| S16a–d | github.com/neonfuzz/svg_quilter; TetonTopo/quiltblock; william-pyle/QuiltDesigner; JesseRWeigel/quiltsmith | MIT/MIT/GPL-3.0/MIT | 8★/0★/0★/0★; single-function or stubs (via `gh api`) | 4 |
-| S17 | prostitcher.com/prostitcher-designer/ | not checked | Pro-Stitcher Designer: "compatible with all major longarm formats; import/export vector" | 2, 3 |
-| S18 | search.f-droid.org/?q=quilt | n/a | "F-Droid does not have any apps matching… quilt" | 4 |
-| S19 | flathub.org/api/v2/search (quilt/quilting/patchwork) | n/a | No dedicated quilt-design app; Seamly2D is the only sewing-adjacent hit (exact set not re-confirmed) | 4 |
-| S20 | github.com/FashionFreedom/Seamly2D | GPL-3.0 | 988★, active 2026-10-10; garment CAD, wrong domain | 4 |
-| S21 | github.com/inkstitch/inkstitch | GPL-3.0 | 1,364★, active; machine embroidery, not pieced quilts | 4 |
-| S22 | quiltassistant.com/free-quilt-design-software | not checked | "not designed to be a cheap alternative…"; v2.25 (April 2013); can export to EQ formats | 4 |
-| S23 | doyoueq.com/blog/2023/12/design-discover-sashing-without-cornerstones/ + doyoueq.com/blog/2021/03/eq8-lessons-with-yvonne-using-svg-files-from-blockbase/ | not checked | Sashing lessons; BlockBase+ SVG export | 1, 7 |
-| S24 | classes.electricquilt.com (teachersforhire / eq-teacher-credentials / class-catalog) | not checked | Hire-an-EQ-Teacher directory, credential program, EQ Academy (in-person) and EQ At Home (online) | 1 |
-| S25 | electricquilt.com/home/about-electric-quilt/ | not checked | Founded 1991; Dean Neumann; first program a DOS app | 2 |
-| S26 | doyoueq.com/blog/2018/10/happy-1st-birthday-eq8/ + doyoueq.com/blog/2017/10/announcing-electric-quilt-8/ | not checked | EQ8 released 2017-10-23 (upgrade) / 2017-11-13 (full) | 2 |
-| S27 | electricquilt.com/product-updates/eq8-updates/eq8-update-release-notes/ | not checked | Windows 1.1.0.6 fixed "switching worktables on Print & Export… crash" | 2 |
-| S28 | onpointquilter.com/blog/design-n-quilt-software-versus-electric-quilt-8 | not checked | Design N Quilt SRP $799.99 (retailers discount to ~$160–400) | 3 |
-| S29 | quiltingboard.com/main-f1/eq8-not-t306667.html | not checked | "huge learning curve" | 5 |
-| S30 | reddit.com/r/quilting/comments/1n2aodx/should_i_buy_eq8/ | not checked | "clunky… learning curve… worth it if you are tech savvy" | 5 |
-| S31 | reddit.com/r/quilting/comments/15tpp3h/quiltassistant_vs_eq8/ | not checked | EQ8 strong for whole-quilt design; weak elsewhere | 5 |
-| S32 | sewing.patternreview.com/SewingDiscussions/topic/130298 | not checked | "steep learning curve" | 5 |
-| S34 | quarterinch.app (+ /guides/eq8-macos-27) | not checked | Quarter Inch free/$9-mo/$89-yr; opens .pj8 free; "EQ8 for Mac relies on Rosetta today" | 3, 5, 8 |
-| S35 | support.electricquilt.com/articles/creating-new-projects-2/ | not checked | EQ8 project files use extension *.PJ8 | 7 |
-| S36 | support.electricquilt.com/articles/export-a-quilt/ | not checked | EQ8 export options (image/selection/metafile/Facebook); WMF libs "copyrighted by Microsoft" | 7 |
-| S37 | jacquelynnesteves.com/half-square-triangle-hst-cheat-sheet-and-tutorial/ | not checked | HST cut square = finished + 7/8″ | 8 |
-| S38 | blog.wholecirclestudio.com/tutorial-formulas-3-easy-ways-to-make-half-square-triangles-hsts/ | not checked | HST formulas (2- and 8-at-a-time) | 8 |
-| S39 | reddit.com/r/quilting/comments/1fo7ov9/… | not checked | Square +½″, HST +7/8″ seam allowance | 8 |
-| S40 | thequiltingnook.wordpress.com/…/on-point-setting-with-sashing-and-cornerstones-1.pdf | not checked | On-point setting-triangle formula | 8 |
-| S41 | stitchinheaven.com/blogs/quilting/how-much-fabric-for-a-quilt | not checked | Yardage / binding strip-count method | 8 |
-| S42 | onpointquilter.com/blog/calculating-yardage-for-binding | not checked | Binding formula | 8 |
-| S43 | lilysquilts.blogspot.com/2012/10/quilt-math-part-i-calculating-binding.html | not checked | Binding strips × width | 8 |
-| S44 | mrsquilty.com/blogs/news/how-to-calculate-fabric-for-a-quilt-without-the-confusing-math | not checked | 42–44″ usable width | 8 |
-| S45 | quiltersparadiseesc.com/Calculators/Binding Calculator.php | not checked | Reference binding calculator | 8 |
-| S46 | sewing.patternreview.com/SewingDiscussions/topic/122716 | not checked | "EQ8 is the be all end all for quilting design" | 5 |
+| ID     | URL                                                                                                                                                       | Terms / license     | Establishes                                                                                                                                                                                                                                           | Supports §    |
+| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| S1     | craftindustryalliance.org/quilting-trends-survey-results-2020/                                                                                            | not checked         | 2020 Premier Needle Arts survey: $4.2B market; 9–11M NA quilters; 98% female / 65% retired; "retired woman in her 60s… $74,000… 8–10 quilts/yr… 6–10 hrs/wk"; 46% search online daily; survey funded by PNA (owns Quilt Pro Systems)                  | 1, 5, 9       |
+| S1b    | craftindustryalliance.org/the-size-of-the-quilting-market-quilting-trends-survey-results-2021/                                                            | not checked         | 2021 iteration: 10–12M quilters; 2022 PDF (fabshopnet) repeats 9–11M                                                                                                                                                                                  | 1             |
+| S2     | electricquilt.com/online-shop/electric-quilt-8/ (+ /category/electric-quilt-8-eq8/, /online-shop/blockbase/)                                              | not checked         | $239.95; single-user, 2 activations, non-transferable; $24.95 Migration Kit; "6,200 fabrics"; "6,000+ copyright-free blocks"; BlockBase+ 4,264 blocks from Brackman's _Encyclopedia_; add-ons (AccuQuilt, EQ Artists, Stash, Kaleidoscope, Dear Jane) | 2, 6          |
+| S3     | support.electricquilt.com/articles/eq8-system-requirements/                                                                                               | not checked         | Win 7 SP1–Win 11; macOS 10.13–Tahoe 26/Sequoia 15; M-series; no Chromebook/iPad/Android/iOS/ARM/S-mode/Linux; "internet required for activating, periodic validation; offline use OK"                                                                 | 2, 5          |
+| S4     | support.electricquilt.com/articles/support-for-macos-big-sur/                                                                                             | not checked         | "EQ8 now fully supports… M1 chip"; 3.2.0.4 (2021-05-19) fixed lag                                                                                                                                                                                     | 2             |
+| S5     | support.electricquilt.com/articles/wine-error/                                                                                                            | not checked         | "Wine error" support article (image import/printing/install) — consistent with a Wine-based Mac build                                                                                                                                                 | 2             |
+| S5a    | support.electricquilt.com/articles/what-is-rosetta/                                                                                                       | not checked         | M-series Macs "will need Rosetta installed in order to run EQ8"                                                                                                                                                                                       | 2             |
+| S6     | support.electricquilt.com/articles/macos-28-compatibility-with-eq/                                                                                        | not checked         | Vendor: "will have a solution in place before the release of macOS 28" (updated 2026-05-22)                                                                                                                                                           | 2             |
+| S7     | support.apple.com/en-us/102527                                                                                                                            | not checked         | Rosetta available through macOS 27; from macOS 28 "only for certain older, unmaintained games"                                                                                                                                                        | 2             |
+| S8     | electricquilt.com/product-updates/eq8-updates/eq8-update-release-notes/                                                                                   | not checked         | Windows 1.1.0.6 (2025-02-28); Mac 3.2.0.7 (2023-11-10); 3.2.0.4 "does not add… Apple Silicon M1"                                                                                                                                                      | 2, 4          |
+| S9     | niftyfiftyquilting.com/quilt-design-software/eq8-alternatives                                                                                             | not checked         | Competitor comparison ("Updated August 2026"); free NiftyFifty covers core loop; "three complaints" = price / learning curve / desktop lock-in; PreQuilt/Quiltler/TideStitch/Quiltography/StitchLogic/CinchQuilt pricing                              | 3, 4, 5, 6, 9 |
+| S10    | quiltler.com/eq8-alternative + quiltler.com/terms                                                                                                         | not checked         | Quiltler does not import EQ8 .pj8; $7.99/mo or $49.99/yr                                                                                                                                                                                              | 3, 5          |
+| S11    | support.electricquilt.com/articles/exporting-for-longarm-quilting-machines/                                                                               | not checked         | EQ8 has no longarm export                                                                                                                                                                                                                             | 2, 7          |
+| S12    | GitHub search (`gh search repos`, ≥14 queries incl. DE/FR/ES/JA)                                                                                          | n/a                 | No maintained quilt-design repo; "quilt" dominated by Minecraft Quilt loader                                                                                                                                                                          | 4             |
+| S13    | GitLab API projects?search=quilt                                                                                                                          | n/a                 | Zero quilt-design results (equilibrator, Minecraft-adjacent)                                                                                                                                                                                          | 4             |
+| S14    | Codeberg API repos/search?q=quilt                                                                                                                         | n/a                 | Only bmad4ever/bmquilting (0★) quilt-adjacent; rest Minecraft                                                                                                                                                                                         | 4             |
+| S15    | SourceForge directory ?q=quilt                                                                                                                            | n/a                 | No quilt-design software surfaced                                                                                                                                                                                                                     | 4             |
+| S16    | support.oesd.com/article/152-formats-supported                                                                                                            | not checked         | Longarm/quilting formats QLI, HQF, IQP, BQM, CQP, HQA, HQV, HQW, PAT, QCC, SSD; DXF/SVG under vector                                                                                                                                                  | 2, 7          |
+| S16a–d | github.com/neonfuzz/svg_quilter; TetonTopo/quiltblock; william-pyle/QuiltDesigner; JesseRWeigel/quiltsmith                                                | MIT/MIT/GPL-3.0/MIT | 8★/0★/0★/0★; single-function or stubs (via `gh api`)                                                                                                                                                                                                  | 4             |
+| S17    | prostitcher.com/prostitcher-designer/                                                                                                                     | not checked         | Pro-Stitcher Designer: "compatible with all major longarm formats; import/export vector"                                                                                                                                                              | 2, 3          |
+| S18    | search.f-droid.org/?q=quilt                                                                                                                               | n/a                 | "F-Droid does not have any apps matching… quilt"                                                                                                                                                                                                      | 4             |
+| S19    | flathub.org/api/v2/search (quilt/quilting/patchwork)                                                                                                      | n/a                 | No dedicated quilt-design app; Seamly2D is the only sewing-adjacent hit (exact set not re-confirmed)                                                                                                                                                  | 4             |
+| S20    | github.com/FashionFreedom/Seamly2D                                                                                                                        | GPL-3.0             | 988★, active 2026-10-10; garment CAD, wrong domain                                                                                                                                                                                                    | 4             |
+| S21    | github.com/inkstitch/inkstitch                                                                                                                            | GPL-3.0             | 1,364★, active; machine embroidery, not pieced quilts                                                                                                                                                                                                 | 4             |
+| S22    | quiltassistant.com/free-quilt-design-software                                                                                                             | not checked         | "not designed to be a cheap alternative…"; v2.25 (April 2013); can export to EQ formats                                                                                                                                                               | 4             |
+| S23    | doyoueq.com/blog/2023/12/design-discover-sashing-without-cornerstones/ + doyoueq.com/blog/2021/03/eq8-lessons-with-yvonne-using-svg-files-from-blockbase/ | not checked         | Sashing lessons; BlockBase+ SVG export                                                                                                                                                                                                                | 1, 7          |
+| S24    | classes.electricquilt.com (teachersforhire / eq-teacher-credentials / class-catalog)                                                                      | not checked         | Hire-an-EQ-Teacher directory, credential program, EQ Academy (in-person) and EQ At Home (online)                                                                                                                                                      | 1             |
+| S25    | electricquilt.com/home/about-electric-quilt/                                                                                                              | not checked         | Founded 1991; Dean Neumann; first program a DOS app                                                                                                                                                                                                   | 2             |
+| S26    | doyoueq.com/blog/2018/10/happy-1st-birthday-eq8/ + doyoueq.com/blog/2017/10/announcing-electric-quilt-8/                                                  | not checked         | EQ8 released 2017-10-23 (upgrade) / 2017-11-13 (full)                                                                                                                                                                                                 | 2             |
+| S27    | electricquilt.com/product-updates/eq8-updates/eq8-update-release-notes/                                                                                   | not checked         | Windows 1.1.0.6 fixed "switching worktables on Print & Export… crash"                                                                                                                                                                                 | 2             |
+| S28    | onpointquilter.com/blog/design-n-quilt-software-versus-electric-quilt-8                                                                                   | not checked         | Design N Quilt SRP $799.99 (retailers discount to ~$160–400)                                                                                                                                                                                          | 3             |
+| S29    | quiltingboard.com/main-f1/eq8-not-t306667.html                                                                                                            | not checked         | "huge learning curve"                                                                                                                                                                                                                                 | 5             |
+| S30    | reddit.com/r/quilting/comments/1n2aodx/should_i_buy_eq8/                                                                                                  | not checked         | "clunky… learning curve… worth it if you are tech savvy"                                                                                                                                                                                              | 5             |
+| S31    | reddit.com/r/quilting/comments/15tpp3h/quiltassistant_vs_eq8/                                                                                             | not checked         | EQ8 strong for whole-quilt design; weak elsewhere                                                                                                                                                                                                     | 5             |
+| S32    | sewing.patternreview.com/SewingDiscussions/topic/130298                                                                                                   | not checked         | "steep learning curve"                                                                                                                                                                                                                                | 5             |
+| S34    | quarterinch.app (+ /guides/eq8-macos-27)                                                                                                                  | not checked         | Quarter Inch free/$9-mo/$89-yr; opens .pj8 free; "EQ8 for Mac relies on Rosetta today"                                                                                                                                                                | 3, 5, 8       |
+| S35    | support.electricquilt.com/articles/creating-new-projects-2/                                                                                               | not checked         | EQ8 project files use extension \*.PJ8                                                                                                                                                                                                                | 7             |
+| S36    | support.electricquilt.com/articles/export-a-quilt/                                                                                                        | not checked         | EQ8 export options (image/selection/metafile/Facebook); WMF libs "copyrighted by Microsoft"                                                                                                                                                           | 7             |
+| S37    | jacquelynnesteves.com/half-square-triangle-hst-cheat-sheet-and-tutorial/                                                                                  | not checked         | HST cut square = finished + 7/8″                                                                                                                                                                                                                      | 8             |
+| S38    | blog.wholecirclestudio.com/tutorial-formulas-3-easy-ways-to-make-half-square-triangles-hsts/                                                              | not checked         | HST formulas (2- and 8-at-a-time)                                                                                                                                                                                                                     | 8             |
+| S39    | reddit.com/r/quilting/comments/1fo7ov9/…                                                                                                                  | not checked         | Square +½″, HST +7/8″ seam allowance                                                                                                                                                                                                                  | 8             |
+| S40    | thequiltingnook.wordpress.com/…/on-point-setting-with-sashing-and-cornerstones-1.pdf                                                                      | not checked         | On-point setting-triangle formula                                                                                                                                                                                                                     | 8             |
+| S41    | stitchinheaven.com/blogs/quilting/how-much-fabric-for-a-quilt                                                                                             | not checked         | Yardage / binding strip-count method                                                                                                                                                                                                                  | 8             |
+| S42    | onpointquilter.com/blog/calculating-yardage-for-binding                                                                                                   | not checked         | Binding formula                                                                                                                                                                                                                                       | 8             |
+| S43    | lilysquilts.blogspot.com/2012/10/quilt-math-part-i-calculating-binding.html                                                                               | not checked         | Binding strips × width                                                                                                                                                                                                                                | 8             |
+| S44    | mrsquilty.com/blogs/news/how-to-calculate-fabric-for-a-quilt-without-the-confusing-math                                                                   | not checked         | 42–44″ usable width                                                                                                                                                                                                                                   | 8             |
+| S45    | quiltersparadiseesc.com/Calculators/Binding Calculator.php                                                                                                | not checked         | Reference binding calculator                                                                                                                                                                                                                          | 8             |
+| S46    | sewing.patternreview.com/SewingDiscussions/topic/122716                                                                                                   | not checked         | "EQ8 is the be all end all for quilting design"                                                                                                                                                                                                       | 5             |
 
 ## Facts, inferences, proposals
 
@@ -507,7 +507,7 @@ requirement.
 
 Consolidated from the tracks' proposals. Each is a proposal for the specification.
 
-*Measurement and arithmetic*
+_Measurement and arithmetic_
 
 1. Lengths are stored exactly, as whole sixteenths of an inch; values are rounded only when shown as
    a cut size, up to the next 1/8 inch (D, A).
@@ -521,33 +521,33 @@ Consolidated from the tracks' proposals. Each is a proposal for the specificatio
 4. Binding, backing and batting are calculated, with strip width, joining allowance and backing
    overhang as settings.
 
-*Layout*
+_Layout_
 
 5. A quilt is a grid of block slots with rotation, optional sashing with or without cornerstones,
    and one or more borders with butted corners (D).
 6. An on-point setting computes side and corner setting triangles by the formulas above, adding the
    sashing width to the block size when there is sashing (D, A).
 
-*Blocks*
+_Blocks_
 
 7. Blocks are defined as geometry on a grid in the project's own words, never copied from a modern
    compilation; each block records the public-domain source for its name and its geometry (B).
 8. The first library contains only straight-seam blocks without set-in seams (B).
 9. Trademarked or designer-tied names are screened and excluded by default (B).
 
-*Fabrics*
+_Fabrics_
 
 10. A fabric is a solid colour or a photo with a stored scale, set by marking two points a known
     distance apart or by typing the repeat size; colour is treated as approximate (D, C).
 
-*Printing*
+_Printing_
 
 11. Cutting charts and templates print at exact size on Letter or A4 and every page carries a 1-inch
     and a 1-cm test square; templates larger than a page are tiled with overlap and alignment marks;
     output is PDF and SVG (C, D, E).
 12. Cutting charts list totals in yards and metres (C).
 
-*Files, storage and privacy*
+_Files, storage and privacy_
 
 13. Designs save to a documented, versioned open format; older versions are upgraded into a new copy;
     unknown newer versions are refused without changing the file (E, C).
@@ -557,7 +557,7 @@ Consolidated from the tracks' proposals. Each is a proposal for the specificatio
 16. After one online visit the app works offline, and no design, photo or usage data leaves the
     device; there is no telemetry (E, charter).
 
-*Usability and accessibility*
+_Usability and accessibility_
 
 17. Every action done by dragging can also be done by tapping or clicking; touch targets are at least
     24 by 24 CSS pixels; text resizes to 200 percent; text contrast is at least 4.5 to 1; colour is
@@ -569,23 +569,23 @@ Consolidated from the tracks' proposals. Each is a proposal for the specificatio
 
 The orchestrator's recommendation is given for each; the decision is the maintainer's.
 
-| Decision | Options | Recommendation | Evidence |
-| --- | --- | --- | --- |
-| Foundation paper piecing | Exclude from v1; quilter marks sections and order, tool prints; tool finds the split | Exclude from v1; make "quilter marks, tool prints" the first addition | D section 2 |
-| On-point setting | In v1 or later | In v1: two formulas, and the charter's sampler needs it | D, A |
-| Other layouts | Medallion, rows, mitered corners, pieced borders | Defer all | D section 1 |
-| Block library | About 40 straight-seam blocks; also stars, hexagons, curves | About 40 straight-seam blocks | B sections 1 and 5 |
-| 1931 to 1963 sources | Pre-1931 only; commission a renewal search | Pre-1931 only for now | B section 2 |
-| Units | Inches only; inches with metric totals and A4; full metric editing | Inches, with metric totals and A4 printing; full metric later | A section 1, C section 6 |
-| Fabric photo scale | Ruler in photo; typed repeat; both | Both: they set the same scale factor | D section 3 |
-| Accessibility level | WCAG 2.2 AA; AAA | AA, with 44-pixel touch targets as the design goal | C section 5 |
-| Usable fabric width | 40 or 42 inches, as default | 40, changeable: buying short is worse than buying extra | A section 4 |
-| Yardage rounding | 1/8 or 1/4 yard | 1/8 yard | A section 4 |
-| Bed-size presets | Ship a table; leave them out | Leave out of v1; sources disagree too much | A section 3 |
-| Cutting plan | Greedy strips per size; mixed-size optimisation | Greedy, as every public calculator does | A section 6 |
-| Stack | A Rust DOM framework (Leptos, Dioxus, Yew); TypeScript | Build the same small prototype in the leading options and measure it on an iPad before choosing | E sections 2 and 5 |
-| Editing surface | SVG with HTML controls; canvas | SVG with HTML controls, for accessibility | E section 2 |
-| Project file | JSON; ZIP of JSON and images; SVG with embedded data | A single ZIP with versioned JSON and embedded fabric photos | E section 6 |
+| Decision                 | Options                                                                              | Chosen Option                                                         | Evidence                 |
+| ------------------------ | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------- | ------------------------ |
+| Foundation paper piecing | Exclude from v1; quilter marks sections and order, tool prints; tool finds the split | Exclude from v1; make "quilter marks, tool prints" the first addition | D section 2              |
+| On-point setting         | In v1 or later                                                                       | In v1: two formulas, and the charter's sampler needs it               | D, A                     |
+| Other layouts            | Medallion, rows, mitered corners, pieced borders                                     | Defer all                                                             | D section 1              |
+| Block library            | About 40 straight-seam blocks; also stars, hexagons, curves                          | About 40 straight-seam blocks                                         | B sections 1 and 5       |
+| 1931 to 1963 sources     | Pre-1931 only; commission a renewal search                                           | Pre-1931 only for now                                                 | B section 2              |
+| Units                    | Inches only; inches with metric totals and A4; full metric editing                   | Inches, with metric totals and A4 printing; full metric later         | A section 1, C section 6 |
+| Fabric photo scale       | Ruler in photo; typed repeat; both                                                   | Both: they set the same scale factor                                  | D section 3              |
+| Accessibility level      | WCAG 2.2 AA; AAA                                                                     | AA, with 44-pixel touch targets as the design goal                    | C section 5              |
+| Usable fabric width      | 40 or 42 inches, as default                                                          | 40, changeable: buying short is worse than buying extra               | A section 4              |
+| Yardage rounding         | 1/8 or 1/4 yard                                                                      | 1/8 yard                                                              | A section 4              |
+| Bed-size presets         | Ship a table; leave them out                                                         | Leave out of v1; sources disagree too much                            | A section 3              |
+| Cutting plan             | Greedy strips per size; mixed-size optimisation                                      | Greedy, as every public calculator does                               | A section 6              |
+| Stack                    | A Rust DOM framework (Leptos, Dioxus, Yew); TypeScript                               | Typescript                                                            | E sections 2 and 5       |
+| Editing surface          | SVG with HTML controls; canvas                                                       | SVG with HTML controls, for accessibility                             | E section 2              |
+| Project file             | JSON; ZIP of JSON and images; SVG with embedded data                                 | A single ZIP with versioned JSON and embedded fabric photos           | E section 6              |
 
 ### Still unknown, and next steps
 
