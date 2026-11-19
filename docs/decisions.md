@@ -96,3 +96,12 @@ unaided, every printed square within tolerance, no severe blocker).
 
 **Not decided here.** The specification itself is not approved until the maintainer approves an
 exact commit and it is recorded in `genairosity.json`.
+
+## 2026-11-19: Specification approved
+
+The maintainer (GitHub `komali2`, caleb@508.dev) approved the functional specification in
+[a comment on PR 3](https://github.com/508-dev/librequilt/pull/3#issuecomment-7002479585), posted
+after that PR's last commit, `b358fef4ed8c3a0c3c0a9a0419ab408ab3831d8c`, and merged it with a
+merge commit that keeps that commit in `main`. Recorded by an agent in
+`genairosity.json.specificationApproval`. Implementation starts in a separate context from that
+revision of `docs/specification.md`; material changes to it need fresh approval.

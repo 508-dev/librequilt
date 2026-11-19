@@ -6,7 +6,7 @@ Repository: https://github.com/508-dev/librequilt
 
 Maintainer: caleb@508.dev
 
-Research-stage project. Registration in the Genairosity hub requires maintainer approval. No implementation or release is promised.
+Functional specification approved on 2026-11-19 (see `genairosity.json`); implementation has not started. Registration in the Genairosity hub requires maintainer approval. No implementation or release is promised.
 
 Platform and stack: a web-only application in TypeScript that runs in current browsers on
 Windows, macOS, iPadOS, ChromeOS and Linux ([decisions](docs/decisions.md)). There is no code
