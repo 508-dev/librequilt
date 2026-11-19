@@ -12,7 +12,8 @@ boundary. Where the specification is unclear, the question is written into
 [Clarifications needed](#clarifications-needed) and nothing is chosen that would contradict the
 specification meanwhile.
 
-Status: ticket IMPL-01 is done (see [Ticket list](#ticket-list)). Nothing else is started.
+Status: tickets IMPL-01 and IMPL-02 are done (see [Ticket list](#ticket-list)). Nothing else is
+started.
 
 ## Architecture
 
@@ -199,6 +200,8 @@ unrounded inputs that exercise the irrational path live in the tests, not in `sr
 `python3 docs/specification-fixtures.py` and the fixture line named in a comment.
 
 ### IMPL-02 — Cuttable units and their refusals
+
+**Done.** Recorded in [verification](verification.md).
 
 **Objective.** Every cuttable unit of `G-03` to `G-08` as a function from a finished size to its
 parent cuts, its yield and its trim variant, plus a typed refusal for an unsupported seam.
