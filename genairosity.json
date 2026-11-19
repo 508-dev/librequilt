@@ -8,5 +8,10 @@
   "maintainer": "caleb@508.dev",
   "license": "AGPL-3.0-or-later",
   "licenseException": null,
-  "specificationApproval": null
+  "specificationApproval": {
+    "reviewer": "caleb@508.dev",
+    "date": "2026-11-19",
+    "url": "https://github.com/508-dev/librequilt/pull/3#issuecomment-7002479585",
+    "commit": "b358fef4ed8c3a0c3c0a9a0419ab408ab3831d8c"
+  }
 }
