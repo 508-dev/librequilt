@@ -19,6 +19,7 @@
 export * as Border from './border';
 export * as Demand from './demand';
 export * as Grid from './grid';
+export * as OnPoint from './on-point';
 export * as Plan from './plan';
 export * as Refusal from './refusal';
 export * as Sashing from './sashing';
