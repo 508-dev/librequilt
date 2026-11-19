@@ -47,6 +47,11 @@ export type LayoutRefusal =
       readonly column: number;
       readonly expected: Sixteenths;
       readonly actual: Sixteenths;
+    }
+  | {
+      readonly kind: 'non-square-block';
+      readonly width: Sixteenths;
+      readonly height: Sixteenths;
     };
 
 /** The outcome of any layout question: an answer, or a typed refusal (I5). */
@@ -77,6 +82,8 @@ export function describeLayoutRefusal(refusal: LayoutRefusal): string {
       return `Row ${refusal.row + 1}, column ${refusal.column + 1} has been given two blocks. Each position holds one block or stays plain.`;
     case 'block-finished-size-mismatch':
       return `The block at row ${refusal.row + 1}, column ${refusal.column + 1} finishes at ${L.formatInches(refusal.actual)} inches, but this quilt's blocks finish at ${L.formatInches(refusal.expected)} inches. Every position needs the same finished size.`;
+    case 'non-square-block':
+      return `An on-point setting needs square blocks. This block finishes at ${L.formatInches(refusal.width)} by ${L.formatInches(refusal.height)} inches, and the diagonal geometry only works with equal sides.`;
     default:
       return describeUnitRefusal(refusal);
   }
