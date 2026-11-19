@@ -1,0 +1,58 @@
+# librequilt continuous integration.
+#
+# Runs the checks documented in docs/verification.md. Every action is pinned to
+# a full commit SHA, because a tag can be moved. The comment after each pin
+# records the release the SHA belongs to, so a reviewer can see what it is
+# without resolving it.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Typecheck, lint, test, build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install Bun
+        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: 1.4.2
+
+      # The lockfile is committed, so CI installs exactly it and nothing else.
+      # bunfig.toml also sets a seven-day minimum release age, which keeps a
+      # brand-new version out of a resolution even when one is requested.
+      - name: Install dependencies from the lockfile
+        run: bun install --frozen-lockfile
+
+      - name: Typecheck
+        run: bun run typecheck
+
+      - name: Lint and check formatting
+        run: bun run lint
+
+      - name: Unit tests
+        run: bun test
+
+      - name: Build the static site
+        run: bun run build
+
+      - name: Check the project contract
+        run: python3 scripts/check-project.py

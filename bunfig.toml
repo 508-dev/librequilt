@@ -1,0 +1,10 @@
+# librequilt package-manager configuration.
+#
+# The project's dependency policy (docs/verification.md) requires a supported
+# cooldown on new releases. `minimumReleaseAge` is in seconds; 604800 is seven
+# days. A version published more recently than that is not installable, so a
+# freshly broken or compromised release cannot enter the lockfile by accident.
+[install]
+minimumReleaseAge = 604800
+exact = true
+frozenLockfile = false
