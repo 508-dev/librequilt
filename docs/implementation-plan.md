@@ -139,45 +139,45 @@ file hand-off, image decoding, the editing surface, offline caching and printing
 
 ## Ticket list
 
-Each ticket is sized for one agent to finish and verify. The pure core comes first: tickets
+Each ticket is sized for one agent to finish and verify. Status is tracked in the GitHub issue named in the last column (closed means done); this list is not updated as tickets finish. Each ticket records its verification results in its own file, `docs/verification/IMPL-NN.md`. The pure core comes first: tickets
 IMPL-02 to IMPL-10 implement the `G-`, `L-` and `F-` requirements and satisfy `T-01` to `T-05`
 before any browser work starts.
 
-| # | Title | Implements | Tests | Needs |
-| --- | --- | --- | --- | --- |
-| IMPL-01 | Exact lengths and the rounding rules | G-01, G-02 | T-01 (rounding) | — |
-| IMPL-02 | Cuttable units and their refusals | G-03–G-08 | T-01 | 01 |
-| IMPL-03 | The block as a measured grid | W-02, W-03 | T-01 | 02 |
-| IMPL-04 | Straight layout geometry | L-01–L-03 | T-02 | 01, 03 |
-| IMPL-05 | On-point layout geometry | L-04, L-05 | T-03 | 04 |
-| IMPL-06 | Fabric identity and photo calibration | F-01 | T-06 (pure) | 01 |
-| IMPL-07 | Greedy strips and per-fabric yardage | F-02, F-03, F-06 | T-04 | 04, 06 |
-| IMPL-08 | Binding, backing and batting | F-04, F-05 | T-05 | 07 |
-| IMPL-09 | Inch and metric readouts | P-01 | T-04a | 01 |
-| IMPL-10 | The chart as data | P-01, W-06, F-06, P-03 | T-02, T-04, T-05 | 05, 08, 09 |
-| IMPL-11 | Document, commands, undo and redo | W-01, W-08 | T-02 (undo) | 10 |
-| IMPL-12 | Manifest schema, validation and refusal | D-01, D-02 | T-07 (pure) | 11 |
-| IMPL-13 | The `.lqzip` container | D-01, D-02 | T-07 | 12 |
-| IMPL-14 | Page model, true-scale SVG and tiling | P-02, P-03 | T-08 (geometry) | 10 |
-| IMPL-15 | PDF output over the same page model | P-02, P-03 | T-08 (geometry) | 14 |
-| IMPL-16 | The scope refusal register | W-07 | T-12 | 10 |
-| IMPL-17 | Block library and provenance register | W-03 | T-12 | 03 — **human source check** |
-| IMPL-18 | App shell bound to the document | W-01, A-01 | T-09, T-10 | 11 |
-| IMPL-19 | Block drawing surface | W-02, A-01 | T-10 | 18 |
-| IMPL-20 | Layout editing surface | W-04, A-01 | T-02, T-10 | 18 |
-| IMPL-21 | Fabric photos in the browser | F-01, W-05, O-08 | T-06 | 06, 18 |
-| IMPL-22 | Fabric assignment and greyscale preview | W-05, A-02 | T-06, T-10 | 21 |
-| IMPL-23 | Chart and template output in the app | W-06, P-01–P-03 | T-08 | 15, 20 |
-| IMPL-24 | Save, open, share and the temporary draft | D-03 | T-07, T-09 | 13, 18 |
-| IMPL-25 | Offline service worker and update protection | X-01, D-03 | T-09 | 24 |
-| IMPL-26 | Browser test harness and platform matrix | X-01, O-09 | T-09 | 25 — **real devices** |
-| IMPL-27 | Accessibility audit and fixes | A-01, A-02 | T-10 | 23, 26 — **human pass** |
-| IMPL-28 | Print-scale verification | P-01–P-03 | T-08 | 23 — **printing and a ruler** |
-| IMPL-29 | Four-at-a-time HST sewn validation | G-05, O-06 | T-01 | 02, 28 — **sewing** |
-| IMPL-30 | On-point proof quilt | L-05, O-11 | T-03 | 05, 28 — **sewing** |
-| IMPL-31 | Performance measurement and the photo cap | X-02, O-08, O-10 | T-13 | 26 — **real devices** |
-| IMPL-32 | Usability round with five to eight quilters | A-03 | T-11 | 23, 27 — **quilters** |
-| IMPL-33 | Release evidence and security-reporting route | project contract | — | 26–32 |
+| # | Title | Implements | Tests | Needs | Issue |
+| --- | --- | --- | --- | --- | --- |
+| IMPL-01 | Exact lengths and the rounding rules | G-01, G-02 | T-01 (rounding) | — | #7 |
+| IMPL-02 | Cuttable units and their refusals | G-03–G-08 | T-01 | 01 | #8 |
+| IMPL-03 | The block as a measured grid | W-02, W-03 | T-01 | 02 | #9 |
+| IMPL-04 | Straight layout geometry | L-01–L-03 | T-02 | 01, 03 | #10 |
+| IMPL-05 | On-point layout geometry | L-04, L-05 | T-03 | 04 | #11 |
+| IMPL-06 | Fabric identity and photo calibration | F-01 | T-06 (pure) | 01 | #12 |
+| IMPL-07 | Greedy strips and per-fabric yardage | F-02, F-03, F-06 | T-04 | 04, 06 | #13 |
+| IMPL-08 | Binding, backing and batting | F-04, F-05 | T-05 | 07 | #14 |
+| IMPL-09 | Inch and metric readouts | P-01 | T-04a | 01 | #15 |
+| IMPL-10 | The chart as data | P-01, W-06, F-06, P-03 | T-02, T-04, T-05 | 05, 08, 09 | #16 |
+| IMPL-11 | Document, commands, undo and redo | W-01, W-08 | T-02 (undo) | 10 | #17 |
+| IMPL-12 | Manifest schema, validation and refusal | D-01, D-02 | T-07 (pure) | 11 | #18 |
+| IMPL-13 | The `.lqzip` container | D-01, D-02 | T-07 | 12 | #19 |
+| IMPL-14 | Page model, true-scale SVG and tiling | P-02, P-03 | T-08 (geometry) | 10 | #20 |
+| IMPL-15 | PDF output over the same page model | P-02, P-03 | T-08 (geometry) | 14 | #21 |
+| IMPL-16 | The scope refusal register | W-07 | T-12 | 10 | #22 |
+| IMPL-17 | Block library and provenance register | W-03 | T-12 | 03 — **human source check** | #23 |
+| IMPL-18 | App shell bound to the document | W-01, A-01 | T-09, T-10 | 11 | #24 |
+| IMPL-19 | Block drawing surface | W-02, A-01 | T-10 | 18 | #25 |
+| IMPL-20 | Layout editing surface | W-04, A-01 | T-02, T-10 | 18 | #26 |
+| IMPL-21 | Fabric photos in the browser | F-01, W-05, O-08 | T-06 | 06, 18 | #27 |
+| IMPL-22 | Fabric assignment and greyscale preview | W-05, A-02 | T-06, T-10 | 21 | #28 |
+| IMPL-23 | Chart and template output in the app | W-06, P-01–P-03 | T-08 | 15, 20 | #29 |
+| IMPL-24 | Save, open, share and the temporary draft | D-03 | T-07, T-09 | 13, 18 | #30 |
+| IMPL-25 | Offline service worker and update protection | X-01, D-03 | T-09 | 24 | #31 |
+| IMPL-26 | Browser test harness and platform matrix | X-01, O-09 | T-09 | 25 — **real devices** | #32 |
+| IMPL-27 | Accessibility audit and fixes | A-01, A-02 | T-10 | 23, 26 — **human pass** | #33 |
+| IMPL-28 | Print-scale verification | P-01–P-03 | T-08 | 23 — **printing and a ruler** | #34 |
+| IMPL-29 | Four-at-a-time HST sewn validation | G-05, O-06 | T-01 | 02, 28 — **sewing** | #35 |
+| IMPL-30 | On-point proof quilt | L-05, O-11 | T-03 | 05, 28 — **sewing** | #36 |
+| IMPL-31 | Performance measurement and the photo cap | X-02, O-08, O-10 | T-13 | 26 — **real devices** | #37 |
+| IMPL-32 | Usability round with five to eight quilters | A-03 | T-11 | 23, 27 — **quilters** | #38 |
+| IMPL-33 | Release evidence and security-reporting route | project contract | — | 26–32 | #39 |
 
 ### IMPL-01 — Exact lengths and the rounding rules
 
@@ -788,14 +788,14 @@ An agent cannot complete these. Each needs a person, a device, a printer or a se
 
 | Ticket | What a person has to do | Consequence if skipped |
 | --- | --- | --- |
-| IMPL-17 | Confirm each block's pre-1931 illustration and name source | `T-12`'s source gate fails; blocks ship on guessed geometry |
-| IMPL-26 | Run the suite on real iPad Safari, including file selection and share | `X-01`'s platform claim is untested |
-| IMPL-27 | A screen-reader pass and a judgement of understandability | `A-01` is asserted, not demonstrated |
-| IMPL-28 | Print at 100% and measure with a ruler | the cutting chart's central promise is unverified |
-| IMPL-29 | Sew two 5½-inch squares into four half-square triangles | `O-06` undecided; the method cannot ship |
-| IMPL-30 | Construct and measure an on-point proof quilt | `O-11` undecided; the outer size stays unverified |
-| IMPL-31 | Measure on a current iPad and a midrange desktop | `T-13`'s targets stay unmeasured and the photo cap unset |
-| IMPL-32 | Observe five to eight quilters, unaided | `A-03`, the charter's bar, is unproven |
+| IMPL-17 | Confirm each block's pre-1931 illustration and name source | `T-12`'s source gate fails; blocks ship on guessed geometry | #23 |
+| IMPL-26 | Run the suite on real iPad Safari, including file selection and share | `X-01`'s platform claim is untested | #32 |
+| IMPL-27 | A screen-reader pass and a judgement of understandability | `A-01` is asserted, not demonstrated | #33 |
+| IMPL-28 | Print at 100% and measure with a ruler | the cutting chart's central promise is unverified | #34 |
+| IMPL-29 | Sew two 5½-inch squares into four half-square triangles | `O-06` undecided; the method cannot ship | #35 |
+| IMPL-30 | Construct and measure an on-point proof quilt | `O-11` undecided; the outer size stays unverified | #36 |
+| IMPL-31 | Measure on a current iPad and a midrange desktop | `T-13`'s targets stay unmeasured and the photo cap unset | #37 |
+| IMPL-32 | Observe five to eight quilters, unaided | `A-03`, the charter's bar, is unproven | #38 |
 
 IMPL-33 also needs the maintainer, for the private security-reporting route.
 
@@ -820,6 +820,8 @@ in `docs/decisions.md` at the ticket that adds it. No font is downloaded at runt
 part of how `X-01` is kept.
 
 ## Clarifications needed
+
+**Resolved:** specification revision 2 (2026-11-19) answers every question below with the provisional assumption stated here, plus the cutting sequences for eight-at-a-time triangles and no-waste geese; see "Revision 2 clarifications" in `docs/specification.md`. The text below is kept as the record of how each was raised.
 
 Questions the specification does not settle. None is a blocker for the tickets before it, and
 nothing below has been resolved in a way that contradicts the specification. Where a ticket has

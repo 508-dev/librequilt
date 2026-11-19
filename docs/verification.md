@@ -94,6 +94,8 @@ numbers come from `python3 docs/specification-fixtures.py`. Current coverage:
 | --- | --- |
 | `T-01` | covered by `bun test`: rounding and length refusals (IMPL-01) and the unit constructions (IMPL-02); the sewn four-at-a-time check is IMPL-29 |
 | `T-02` to `T-07`, `T-04a` | not started; IMPL-04 to IMPL-13 |
+
+From IMPL-03 on, each ticket records its commands and results in `docs/verification/IMPL-NN.md`, and its GitHub issue (#7 to #39, listed in `docs/implementation-plan.md`) is closed when done, so this table is not edited per ticket. IMPL-33 compiles the final coverage.
 | `T-08` to `T-13`, `T-12` | not started; need a browser, a printer, devices or quilters — see [the implementation plan](implementation-plan.md#tickets-that-need-a-physical-or-human-check) |
 
 ### Standing requirements

@@ -193,3 +193,19 @@ install, typecheck, lint, tests, build and `scripts/check-project.py`, with both
 pinned to full commit SHAs. The skeleton adds no telemetry, analytics, third-party runtime
 request or model runner, and the built page carries a `default-src 'none'`
 Content-Security-Policy as the enforcement behind that.
+
+## 2026-11-19: Specification revision 2 and ticket tracking
+
+**Decision.** The maintainer approved resolving the specification gaps raised by the first
+implementation work, and asked for the implementation tickets to be tracked as GitHub issues.
+Specification revision 2 folds in the provisional answers to Q-01 to Q-10 from
+`docs/implementation-plan.md`, the trim-size readings from IMPL-02, and the cutting sequences for
+eight-at-a-time half-square triangles and no-waste flying geese. It changes no scope. Because the
+approval in `genairosity.json` names an exact commit, the revised specification needs the
+maintainer's approval of its new commit before the record is updated.
+
+**Tracking.** Issues #7 to #39 correspond to IMPL-01 to IMPL-33, created from the plan with the
+repository's work-ticket fields; #7 and #8 are closed as done by PRs 5 and 6. The eight tickets
+that need a person, real device, printer or sewing carry the `needs human` label. Each ticket now
+records its verification in `docs/verification/IMPL-NN.md`, so parallel tickets do not edit the
+same table.

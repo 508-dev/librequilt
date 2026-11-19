@@ -192,6 +192,8 @@ print("OTHER ACCEPTANCE NUMBERS")
 print(f"photo scale from repeat: {600/6:g} pixels/in; from ruler: {300/3:g} pixels/in; 2-in span: {2*600/6:g} pixels")
 print(f"file length counts: {12*16} sixteenths; {2*16} sixteenths")
 print(f"97% print: 1-in square {R(97,100)} in; 3.5-in edge {dec(R(7,2)*R(97,100))} in")
+print(f"eight at a time, F = 3 1/16: {mixed(cut(2 * (R(49, 16) + R(7, 8))))} in; doubled exact two-at-a-time rounded once: {mixed(cut(2 * (dec(R(49, 16) + 2 * Q) + dec(R(1, 2)) / SQ)))} in")
+print(f"adjusted raw 550/19 in shown to nearest sixteenth: {mixed(R(round(R(550, 19) * 16), 16))} in")
 print(f"quarter yard in metres: {dec(R(1,4)*R(9144,10000))} m; shown {dec(R(1,4)*R(9144,10000)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP)} m")
 print(f"3 1/2 in in centimetres: shown {(dec(R(7,2))*Decimal('2.54')).quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)} cm")
 
