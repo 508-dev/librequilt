@@ -1,0 +1,126 @@
+/*
+ * librequilt -- app shell styling.
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ *
+ * A-01 targets WCAG 2.2 AA. Every colour pair below is at least 4.5:1 for
+ * ordinary text; no meaning is carried by colour alone; text scales to 200%
+ * without losing content because the layout is a single column in relative
+ * units. No font is downloaded, which keeps X-01's promise of no third-party
+ * runtime request.
+ */
+
+:root {
+  --page: #fdfcfa;
+  --ink: #1f2328;
+  --ink-quiet: #44474d;
+  --rule: #c9c6c0;
+  --link: #0b4f91;
+  --focus: #8a4b00;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #15171a;
+    --ink: #e9e7e3;
+    --ink-quiet: #b9b6b1;
+    --rule: #3b3f45;
+    --link: #93bdf5;
+    --focus: #f0b35c;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--page);
+}
+
+body {
+  margin: 0 auto;
+  padding: 1rem 1.25rem 3rem;
+  max-width: 44rem;
+  background: var(--page);
+  color: var(--ink);
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -100vw;
+  top: 0;
+  padding: 0.75rem 1rem;
+  min-height: 44px;
+  background: var(--page);
+  color: var(--link);
+}
+
+.skip-link:focus {
+  position: static;
+  display: inline-block;
+  left: auto;
+}
+
+header {
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.wordmark {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+main {
+  padding-top: 1.5rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.875rem;
+  line-height: 1.25;
+}
+
+h2 {
+  margin: 2rem 0 0.5rem;
+  font-size: 1.125rem;
+}
+
+p {
+  margin: 0 0 1rem;
+  max-width: 38rem;
+}
+
+.lede {
+  font-size: 1.125rem;
+  color: var(--ink-quiet);
+}
+
+#core-status:not(:empty) {
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--rule);
+}
+
+footer {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-quiet);
+  font-size: 0.9375rem;
+}
+
+abbr {
+  text-underline-offset: 0.2em;
+}
