@@ -44,7 +44,7 @@ Run on Linux 7.2.9 (Manjaro) with Bun 1.4.2, Node 22.23.3 and Python 3.14.7.
 | `bun run typecheck` | clean, no output |
 | `bun run lint` | 18 files checked, no findings |
 | `bun test` | 62 pass, 0 fail, 2787 assertions, 5 files |
-| `bun run build` | `dist/index.html` 2.46 kB, CSS 1.40 kB, JS 0.72 kB (2.14 kB gzipped total) |
+| `bun run build` | `dist/index.html` 2.59 kB, CSS 1.40 kB, JS 0.72 kB (2.22 kB gzipped total) |
 | `python3 scripts/check-project.py` | "Project structure is valid." |
 
 Additional checks made by hand at the same revision:
