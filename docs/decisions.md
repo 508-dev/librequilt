@@ -105,3 +105,91 @@ after that PR's last commit, `b358fef4ed8c3a0c3c0a9a0419ab408ab3831d8c`, and mer
 merge commit that keeps that commit in `main`. Recorded by an agent in
 `genairosity.json.specificationApproval`. Implementation starts in a separate context from that
 revision of `docs/specification.md`; material changes to it need fresh approval.
+
+## 2026-11-19: Implementation toolchain
+
+**Decision.** The implementation skeleton uses Bun as package manager and test runner, Vite for
+the static build, TypeScript in strict mode, and Biome for lint and format. Chosen by the
+implementation agent in the first implementation context, within the stack already decided on
+2026-10-30 (TypeScript, web only); recorded here for maintainer review. Four development
+dependencies, no runtime dependency.
+
+**Package manager: Bun.** Its `bunfig.toml` takes `[install] minimumReleaseAge = 604800`, the
+seven-day cooldown [verification](verification.md) requires, and it was verified to enforce it
+rather than merely accept it: requesting a four-day-old release fails with
+`blocked by minimum-release-age: 604800 seconds`. The lockfile `bun.lock` is committed and is
+plain text, so a reviewer can read a dependency change in a diff; CI installs with
+`bun install --frozen-lockfile`. `exact = true` keeps a caret out of the manifest, so the
+installed version is the recorded one.
+
+*Tradeoff against pnpm.* pnpm would do the same job with `minimumReleaseAge: 10080` and is the
+more widely deployed tool. Bun was chosen because it is also the test runner and the TypeScript
+runtime, which removes two dependencies and one transform configuration. The cost is that one
+young tool now sits under both installing and testing. It is contained: the lockfile is portable,
+nothing in `src` depends on a Bun API, and the release artifact is built by Vite, not by Bun, so
+moving to pnpm later would touch configuration and CI only.
+
+**Test runner: `bun test`.** Built in, so no dependency; runs TypeScript directly; Jest-compatible
+`expect`. It gives the pure core no DOM, which is what enforces the architecture's rule that
+`core/`, `draw/` and `file/` never reach for a browser. Browser-bound tests are a separate runner,
+deferred to its own ticket, which matches the pure/browser-bound split in
+[the implementation plan](implementation-plan.md).
+
+**Build tool: Vite.** `base: './'` emits relative asset URLs, so `dist/` runs from a site root,
+from any subfolder and from a static host with no rewrite rules; this was verified by serving the
+build from a nested path containing a space. Vite also provides the development server the SVG
+editing surface will need, and content-addressed asset names the service worker will precache.
+`modulePreload.polyfill` is off because the polyfill is an inline script, which the project's
+Content-Security-Policy refuses.
+
+*Tradeoff against building with Bun.* `bun build` would remove a dependency. Vite was chosen
+because the relative-base guarantee is documented and stable, because the release artifact should
+not depend on the same young toolchain as the package manager, and because its ecosystem is the
+better-maintained option for a project that will later need offline precaching. The cost is a
+larger development dependency tree: 26 installed packages rather than none.
+
+*A limit worth stating.* Relative paths make the build work from any folder on a static **host**.
+Opening `dist/index.html` directly from the filesystem will not run the application, because
+browsers refuse ES modules over `file://`. This is a browser security rule, not a build setting,
+and it is moot for the finished product: `X-01`'s offline requirement needs a service worker,
+which also requires a real origin.
+
+**Lint and format: Biome.** One dependency replaces ESLint and Prettier, covers TypeScript, CSS
+and JSON, and formats and lints in one command. `bun run lint` is the check and
+`bun run format` writes. *Tradeoff:* a smaller rule ecosystem than ESLint. Nothing the project
+needs today is missing.
+
+**Typecheck: TypeScript 7, strict.** `strict` plus `noUncheckedIndexedAccess`,
+`exactOptionalPropertyTypes`, `noImplicitReturns`, `noUnusedLocals`, `noUnusedParameters`,
+`noPropertyAccessFromIndexSignature`, `verbatimModuleSyntax` and `erasableSyntaxOnly`. The last
+keeps the source free of syntax that needs a transform beyond type erasure, so Bun and Vite agree
+on what the code means. *Tradeoff:* TypeScript 7 is the native compiler and newer than the 6.x
+line; it was verified to typecheck this project cleanly, and reverting is a version change in one
+file.
+
+**Licences.** Every installed package is compatible with AGPL-3.0-or-later, and every one is a
+development dependency: the built site contains only this project's own code, so none of them is
+distributed.
+
+| Direct dependency | Version | Licence | Maintained |
+| --- | --- | --- | --- |
+| `@biomejs/biome` | 2.6.6 | MIT OR Apache-2.0 | yes; 2.6.x released through November 2026 |
+| `@types/bun` | 1.4.4 | MIT | yes; tracks Bun releases |
+| `typescript` | 7.0.2 | Apache-2.0 | yes; Microsoft |
+| `vite` | 8.3.7 | MIT | yes; 8.3.x released through November 2026 |
+
+The full installed set is 26 packages: 15 MIT, 3 MIT OR Apache-2.0, 3 Apache-2.0, 3 MPL-2.0
+(`lightningcss`, Vite's CSS transformer, and its two platform binaries), 1 ISC (`picocolors`) and
+1 BSD-3-Clause (`source-map-js`). All are permissive or, for MPL-2.0, explicitly compatible with
+the GNU licences through its secondary-licence clause; none ships in the output.
+
+**Deferred.** The ZIP, PDF, browser-test and accessibility-audit libraries are chosen at the
+tickets that need them, with their licences recorded then. The candidates and the current leaning
+are in [the implementation plan](implementation-plan.md#dependencies-chosen-and-deferred). No
+font is downloaded at runtime.
+
+**Consequences.** `docs/verification.md` now lists executable commands. CI runs the frozen
+install, typecheck, lint, tests, build and `scripts/check-project.py`, with both GitHub Actions
+pinned to full commit SHAs. The skeleton adds no telemetry, analytics, third-party runtime
+request or model runner, and the built page carries a `default-src 'none'`
+Content-Security-Policy as the enforcement behind that.
