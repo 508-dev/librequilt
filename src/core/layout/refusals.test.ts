@@ -31,6 +31,7 @@ const refusals: readonly LayoutRefusal[] = [
     expected: L.sixteenths(192),
     actual: L.sixteenths(120),
   },
+  { kind: 'non-square-block', width: L.sixteenths(192), height: L.sixteenths(96) },
 ];
 
 describe('I5 layout refusals are values with sentences', () => {
