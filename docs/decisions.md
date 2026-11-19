@@ -90,5 +90,9 @@ question table (O-01 to O-16); recorded by an agent. In brief:
 sets ½ inch, editable, without a cited source. The extension `.lqzip` is the example the
 draft named for "a distinctive extension".
 
-**Not decided here.** The specification itself is not approved. Two thresholds remain
-proposals: the print-scale tolerance in T-08 and the usability pass mark in T-11.
+**Thresholds.** The maintainer also accepted, as written, the print-scale tolerance in T-08
+(1/32 inch or 1 mm) and the usability pass mark in T-11 (at least 4 of 5 or 6 of 8 quilters
+unaided, every printed square within tolerance, no severe blocker).
+
+**Not decided here.** The specification itself is not approved until the maintainer approves an
+exact commit and it is recorded in `genairosity.json`.
