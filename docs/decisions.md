@@ -63,3 +63,32 @@ targets as the design goal; 40-inch default usable fabric width, changeable; yar
 to 1/8 yard; no bed-size presets in the first version; greedy strip cutting plans; an SVG editing
 surface with HTML controls; and a single ZIP project file holding versioned JSON and embedded
 fabric photos.
+
+## 2026-11-19: Open questions in the specification draft
+
+**Decision.** The maintainer approved every recommendation in the specification draft's
+question table (O-01 to O-16); recorded by an agent. In brief:
+- **Defaults, all editable:** binding join allowance 10 inches and strips 2½ inches; backing
+  overhang 4 inches and batting 3 inches; waste and shrinkage zero; tiled-template overlap ½ inch.
+- **Backing:** lengthwise and turned plans are shown side by side and the quilter chooses.
+- **Metric:** shown to two decimals in centimetres and three in metres, labelled approximate.
+- **Four-at-a-time half-square triangles:** offered only if a sewn test validates the corrected
+  formula.
+- **Block library:** only blocks matched to a pre-1931 illustration, fewer rather than guessed.
+- **Fabric photos:** normalized copies of at most 24 megapixels.
+- **Browsers:** the latest and previous stable Safari, Chromium-based and Firefox releases.
+- **Performance:** the specification's performance targets are adopted, revisable after an
+  iPad prototype.
+- **On-point sashing:** a proof quilt is sewn and measured before the tool claims the outer size.
+- **Construction order:** side borders first; short vertical sashes, long horizontal ones.
+- **Project file:** a `.lqzip` file with an integer format version.
+- **Long pieces:** joined width-of-fabric strips by default, a lengthwise cut offered;
+  same-width pieces of one fabric share strips.
+- **Undo and redo:** included.
+
+**Set in review.** The backing join seam allowance had no recommendation; the specification
+sets ½ inch, editable, without a cited source. The extension `.lqzip` is the example the
+draft named for "a distinctive extension".
+
+**Not decided here.** The specification itself is not approved. Two thresholds remain
+proposals: the print-scale tolerance in T-08 and the usability pass mark in T-11.

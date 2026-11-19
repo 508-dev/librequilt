@@ -2,7 +2,8 @@
 
 Run: python3 docs/specification-fixtures.py
 Drafted by an agent; corrected in review on 2026-10-31 (square-in-a-square by outer
-size, cutting orientation, long-border plans).
+size, cutting orientation, long-border plans). Updated 2026-11-19 for the decided
+questions: backing join seams and both backing plans, shared strips, metric display.
 All editable lengths are sixteenths of an inch. Decimal sqrt is used only for
 derived diagonals; cuts round once, upward, to one eighth of an inch.
 """
@@ -70,6 +71,32 @@ def lengthwise(lengths, strip_width, width=R(40)):
     cuts = ceil(len(lengths) / per)
     raw = cuts * max(lengths)
     return f"{per} strips per cut; {cuts} cut(s); {mixed(raw)} in; {mixed(yards(raw))} yd"
+
+
+def shared(pieces, strip_width, width=R(40)):
+    """Same-width pieces of one fabric share strips, longest piece first (first fit)."""
+    strips_left = []
+    for length in sorted(pieces, reverse=True):
+        for i, room in enumerate(strips_left):
+            if room >= length:
+                strips_left[i] -= length
+                break
+        else:
+            strips_left.append(width - length)
+    raw = len(strips_left) * strip_width
+    return f"{len(strips_left)} strips; {mixed(raw)} in; {mixed(yards(raw))} yd"
+
+
+def backing_plans(w, h, overhang, width, join=R(1, 2)):
+    """Widths joined with seam allowance `join` (2*join used per join); both plans."""
+    bw, bh = w + 2 * overhang, h + 2 * overhang
+    out = []
+    for name, across, along in (("lengthwise", bw, bh), ("turned", bh, bw)):
+        n = 1
+        while n * width - (n - 1) * 2 * join < across:
+            n += 1
+        out.append(f"{name}: {n} widths; {mixed(n * along)} in; {mixed(yards(n * along))} yd")
+    return f"{mixed(bw)} x {mixed(bh)} backing; " + "; ".join(out)
 
 
 def onpoint(b, sash=R(0)):
@@ -157,11 +184,16 @@ for width in [R(40),R(108)]:
 print(f"backing 60x80, overhang4, WOF108, turned: {backing(R(80),R(60),R(4),R(108))}")
 print(f"batting 60x80, overhang3: {mixed(R(60)+6)} x {mixed(R(80)+6)} in")
 print(f"25 in planned length, waste10%, shrink5%: {mixed(yards(R(25)*R(11,10)/R(95,100)))} yd")
+print(f"sashes and cornerstones in one fabric: {shared([R(25, 2)] * 17 + [R(5, 2)] * 12, R(5, 2))}")
+print(f"sampler without cornerstones: {3 * 3} vertical sashes 2 1/2 x 12 1/2; {3 + 1} horizontal sashes 2 1/2 x {mixed(R(30) + 2 * Q)}")
+for wid in (R(40), R(108)):
+    print(f"backing 60x80, overhang 4, width {wid}, join 1/2: {backing_plans(R(60), R(80), R(4), wid)}")
 print("OTHER ACCEPTANCE NUMBERS")
 print(f"photo scale from repeat: {600/6:g} pixels/in; from ruler: {300/3:g} pixels/in; 2-in span: {2*600/6:g} pixels")
 print(f"file length counts: {12*16} sixteenths; {2*16} sixteenths")
 print(f"97% print: 1-in square {R(97,100)} in; 3.5-in edge {dec(R(7,2)*R(97,100))} in")
-print(f"quarter yard in metres: {dec(R(1,4)*R(9144,10000))} m")
+print(f"quarter yard in metres: {dec(R(1,4)*R(9144,10000))} m; shown {dec(R(1,4)*R(9144,10000)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP)} m")
+print(f"3 1/2 in in centimetres: shown {(dec(R(7,2))*Decimal('2.54')).quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)} cm")
 
 # Fixed checks catch accidental changes to the fixture generator itself.
 assert dict(rows)["HST 4 corrected"] == R(11,2)
