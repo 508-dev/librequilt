@@ -63,6 +63,28 @@ Additional checks made by hand at the same revision:
   modules over `file://`; the page renders but the script does not run. Offline support will
   require a service worker, which also needs a real origin.
 
+### Recorded results, 2026-11-19 (IMPL-02, cuttable units)
+
+Run on Linux 7.2.9 (Manjaro) with Bun 1.4.2 and Python 3.14.7, at the IMPL-02 commits on
+branch `impl-02-cuttable-units`.
+
+| Check | Result |
+| --- | --- |
+| `bun run typecheck` | clean, no output |
+| `bun run lint` | 31 files checked, no findings |
+| `bun test` | 126 pass, 0 fail, 3648 assertions, 11 files |
+| `bun run build` | `dist/index.html` 2.59 kB, CSS 1.40 kB, JS 0.72 kB |
+| `python3 scripts/check-project.py` | "Project structure is valid." |
+
+Coverage: every row of `T-01`'s unit table is a test against the fixture values of
+`python3 docs/specification-fixtures.py`, including the trim variants, the explicit failure of
+the 4 1/4- and 4 3/4-inch four-at-a-time shortcuts, the refusal of a 3.01-inch entry and of a
+zero finished size, and the curve and set-in-seam refusals with the affected seam named.
+Boundary tests cover whole-eighth inputs, sixteenth-inch sizes, the smallest sixteenth, and the
+1000-inch range bound. Limitations recorded in the same tests: the four-at-a-time HST plan is
+marked provisional behind the O-06 flag until IMPL-29 sews it; the eight-at-a-time parent
+follows clarification Q-01 (doubled unrounded geometry).
+
 ### Acceptance tests
 
 `T-01` to `T-13` in [the specification](specification.md) are the acceptance criteria. Expected
@@ -70,7 +92,7 @@ numbers come from `python3 docs/specification-fixtures.py`. Current coverage:
 
 | Test | State |
 | --- | --- |
-| `T-01` | rounding and length refusals covered by `bun test`; the unit constructions are IMPL-02 and the sewn four-at-a-time check is IMPL-29 |
+| `T-01` | covered by `bun test`: rounding and length refusals (IMPL-01) and the unit constructions (IMPL-02); the sewn four-at-a-time check is IMPL-29 |
 | `T-02` to `T-07`, `T-04a` | not started; IMPL-04 to IMPL-13 |
 | `T-08` to `T-13`, `T-12` | not started; need a browser, a printer, devices or quilters — see [the implementation plan](implementation-plan.md#tickets-that-need-a-physical-or-human-check) |
 

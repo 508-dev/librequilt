@@ -61,6 +61,12 @@ Exact commands and their recorded results are in [verification](docs/verificatio
 - The exact-measurement core (`src/core/exact`): lengths as whole sixteenths of an inch, exact
   rational and `a + b√2` arithmetic, and the two rounding rules — a cut up to the next eighth
   inch, a purchase up to the next eighth yard. Requirements `G-01` and `G-02`.
+- The cuttable-unit core (`src/core/unit`): plain squares, rectangles, strips and strip sets;
+  half-square triangles two, four and eight at a time with their oversized trim variants;
+  quarter-square triangles; flying geese one and four at a time; stitch-and-flip corners;
+  square-in-a-square by finished outer side; each with its parent cuts, counts, yield and trim,
+  and typed refusals for a curve, a set-in seam, a zero size or a length finer than a sixteenth.
+  Requirements `G-03` to `G-08`.
 - A minimal accessible app shell and a static build with no telemetry and no third-party request.
 
 Everything else is planned but not written. See
